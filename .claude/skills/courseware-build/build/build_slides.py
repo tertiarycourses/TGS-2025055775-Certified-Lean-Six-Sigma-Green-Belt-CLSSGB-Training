@@ -5,7 +5,7 @@ Structure:
   Cover -> Admin (TRAQOM, trainers x2, ground rules, LMS, lesson plan x4 days,
   TSC, outcomes, course outline, briefing, assessment, assessment flow, practice exam)
   -> Foundations -> D -> M -> A -> I -> C  (each phase: concept slides then its labs)
-  -> Wrap-up -> Assessment -> Assessment Flow -> Digital Attendance -> TRAQOM -> Thank You
+  -> Wrap-up -> TRAQOM -> Certificate -> Assessment -> Assessment Flow -> Digital Attendance -> Thank You
 
 Content comes entirely from course_data.py + data_domainN.py + concepts.py so the
 PPT, LP, LG and labs stay 100% aligned.
@@ -127,6 +127,30 @@ d.tile_grid("Your Interactive Toolkit", [
     ("NovaSPC", "alfredang.github.io/novaspc — run charts, SPC charts and capability from your CSV (Labs 13, 14, 23)."),
     ("No install needed", "All five run in the browser. No licence, no setup — just open the link."),
 ], kicker="BROWSER-BASED · USED IN THE LABS", cols=2, size=14, accent=TEAL)
+
+# --- The lab data set ---
+# Generated from lab_data.py, the same module that writes the workbooks into each
+# lab folder, so the figures quoted here can never drift from the learner's files.
+import lab_data as LD
+d.tile_grid("Your Lab Data", [
+    ("One dataset, twenty-five labs",
+     f"{LD.TOTAL_ORDERS:,} Northwind orders from one month — {LD.LATE_ORDERS} of them late "
+     f"({LD.LATE_ORDERS/LD.TOTAL_ORDERS*100:.1f}%). Every lab cuts the same data."),
+    ("It reconciles end to end",
+     "Your Lab 2 sigma level, your Lab 15 Pareto and your Lab 25 before/after all "
+     "trace to those same orders — the numbers always agree."),
+    ("Excel, in every lab folder",
+     f"{len(LD.DATASETS)} workbooks. Open labs/lab-NN-<name>/data/ and the file is there, "
+     "with the column guide built into the sheet."),
+    ("The same baseline as the assessment",
+     f"The PP paper quotes {LD.TOTAL_ORDERS:,} orders and {LD.LATE_ORDERS} late. "
+     "You practise on the exact figures you are assessed on."),
+    ("Real statistics, not toy numbers",
+     "A genuine special cause on day 19, one unreliable Gage appraiser, a real "
+     "regression at r = 0.88 — the data rewards doing the analysis properly."),
+    ("Bring your own tool",
+     "Excel, Google Sheets, LibreOffice or NovaSPC — the workbooks open anywhere."),
+], kicker="MOCK DATA · NORTHWIND RETAIL DC", cols=2, size=14, accent=TEAL)
 
 # --- Lesson plan: 4 days ---
 d.two_col("Lesson Plan — Days 1 & 2",
@@ -357,21 +381,10 @@ d.tile_grid("Continuing Your Lean Six Sigma Journey", [
 ], kicker="NEXT STEPS", cols=2, size=15, accent=AMBER)
 
 # ============================================================ CLOSE (house order)
-# Assessment -> Assessment Flow -> Digital Attendance -> TRAQOM -> Thank You
-d.big_statement("Final Assessment",
-                "Written Assessment (SAQ, 2 questions, 60 minutes) then the Practical "
-                "Performance (3 tasks, 90 minutes). Both are open book.",
-                "ASSESSMENT", color=VIOLET)
-
-d.flow_h("Assessment Flow", ASSESSMENT_FLOW, kicker="ON ASSESSMENT DAY", color=VIOLET)
-
-d.flow_h("Digital Attendance (Assessment)", [
-    "Trainer displays the SSG digital attendance QR code",
-    "Scan the QR code with your phone camera",
-    "Key in your NRIC/FIN and submit",
-    "Attendance must be recorded before you begin the papers",
-], kicker="TRAQOM · SSG DIGITAL ATTENDANCE", color=BLUE)
-
+# HARD RULE: the mandated admin block must run
+#   Assessment -> Assessment Flow -> Digital Attendance -> Thank You
+# with nothing inserted between Digital Attendance and Thank You. The TRAQOM
+# survey and the certificate/support slides therefore sit BEFORE the block.
 d.flow_h("TRAQOM Survey", [
     "Open the TRAQOM survey link on the LMS",
     "Key in the last four characters of your NRIC/FIN",
@@ -385,6 +398,20 @@ d.content("Certificate & Support", [
     "Email: enquiry@tertiaryinfotech.com",
     "Tel / WhatsApp: +65 6100 0613",
 ], kicker="AFTER THE COURSE")
+
+d.big_statement("Final Assessment",
+                "Written Assessment (SAQ, 2 questions, 60 minutes) then the Practical "
+                "Performance (3 tasks, 90 minutes). Both are open book.",
+                "ASSESSMENT", color=VIOLET)
+
+d.flow_h("Assessment Flow", ASSESSMENT_FLOW, kicker="ON ASSESSMENT DAY", color=VIOLET)
+
+d.flow_h("Digital Attendance (Assessment)", [
+    "Trainer displays the SSG digital attendance QR code",
+    "Scan the QR code with your phone camera",
+    "Key in your NRIC/FIN and submit",
+    "Attendance must be recorded before you begin the papers",
+], kicker="TRAQOM · SSG DIGITAL ATTENDANCE", color=BLUE)
 
 d.big_statement("Thank You!",
                 "Now go and lead one DMAIC project end to end — that is what a Green Belt is for.",

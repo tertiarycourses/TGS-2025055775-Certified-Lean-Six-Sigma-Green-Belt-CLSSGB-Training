@@ -16,6 +16,8 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 HERE=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,HERE)
 import course_data as C
+import lab_data as LD
+import re as _re
 from data_domain1 import DOMAIN1; from data_domain2 import DOMAIN2
 from data_domain3 import DOMAIN3; from data_domain4 import DOMAIN4
 from data_domain5 import DOMAIN5
@@ -99,6 +101,7 @@ h3("Conventions used in every lab")
 bullets([
  "Each lab states its objective, the deliverable you produce, the steps, and a check to confirm you are done.",
  "Tables shown in the steps can be built in a spreadsheet or on the worksheet provided.",
+ "Each lab folder has a data/ folder with the Excel workbook(s) that lab works on.",
  "Where a lab uses an online tool, the tool URL is shown with the step.",
  "Keep every lab output — they combine into your final improvement package and are your revision material.",
 ])
@@ -121,11 +124,17 @@ for t in C.TOPICS:
         _vis=os.path.join(REPO_ASSETS,"lg-visuals",f"lab-{a['num']:02d}-visual.png")
         if os.path.exists(_vis):
             img(_vis,f"Lab {a['num']} at a glance — the deliverable, the tools and the steps.")
+        _ds = LD.for_lab(a["num"])
+        if _ds:
+            h3("Data for this lab")
+            bullets([f"{LD.filename(x,'xlsx')} — {x['desc']}" for x in _ds])
         h3("Step-by-step")
         steps([(instr,cmd) for instr,cmd in a["steps"]])
         h3("Check your work")
         p(a["test"])
-        note(f"The full worksheet for this lab is in labs/lab-{a['num']:02d}-*.md.")
+        _sl = "-".join(_re.sub(r"[^a-zA-Z0-9 ]","",a["title"].replace("Elective — ","")).lower().split())[:60]
+        note(f"The full worksheet and the data files for this lab are in "
+             f"labs/lab-{a['num']:02d}-{_sl}/.")
         rule()
 
 h1("Quick Reference — Formulas You Should Know")
@@ -282,6 +291,12 @@ prodoc.add_version_control(doc,[
   "assessment papers.",C.TRAINER),
  ("3","19 July 2026","Removed the Practice Exam slide and its asset - there is no Six Sigma practice exam on exams.tertiaryinfotech.com.",C.TRAINER),
  ("4",C.VERSION_DATE,"Added the SIPOC & Process Map Builder (alfredang.github.io/sipoc) to the toolkit - wired into Lab 6 (SIPOC build, pain points, 'Check my SIPOC' validation) and Lab 7 (swimlane and handoff table), the Define phase slides, and a new Your Interactive Toolkit slide that introduces all five browser tools.",C.TRAINER),
+ ("5",C.VERSION_DATE,"Restructured the labs so each lab owns a folder (labs/lab-NN-<name>/) "
+  "containing its lab sheet and a data/ folder of Excel workbooks. Added 28 mock datasets generated from one "
+  "reconciled month of Northwind order-fulfilment data - 4,200 orders with 357 late (8.5%), the exact baseline "
+  "quoted in the WA (SAQ) and PP assessment papers - so every figure a learner calculates reconciles across the "
+  "labs, the slides, the Learner Guide and the assessment. Lab steps now name the workbook and columns they "
+  "operate on instead of referring to unspecified data.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 

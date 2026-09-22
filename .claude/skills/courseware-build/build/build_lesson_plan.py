@@ -193,6 +193,12 @@ prodoc.add_version_control(doc,[
   "the original v21 trainer deck; schedule and labs realigned to the v6 WA (SAQ) and PP assessment papers.",C.TRAINER),
  ("3","19 July 2026","Removed the Practice Exam slide and its asset - there is no Six Sigma practice exam on exams.tertiaryinfotech.com.",C.TRAINER),
  ("4",C.VERSION_DATE,"Added the SIPOC & Process Map Builder (alfredang.github.io/sipoc) to the toolkit - wired into Lab 6 (SIPOC build, pain points, 'Check my SIPOC' validation) and Lab 7 (swimlane and handoff table), the Define phase slides, and a new Your Interactive Toolkit slide that introduces all five browser tools.",C.TRAINER),
+ ("5",C.VERSION_DATE,"Restructured the labs so each lab owns a folder (labs/lab-NN-<name>/) "
+  "containing its lab sheet and a data/ folder of Excel workbooks. Added 28 mock datasets generated from one "
+  "reconciled month of Northwind order-fulfilment data - 4,200 orders with 357 late (8.5%), the exact baseline "
+  "quoted in the WA (SAQ) and PP assessment papers - so every figure a learner calculates reconciles across the "
+  "labs, the slides, the Learner Guide and the assessment. Lab steps now name the workbook and columns they "
+  "operate on instead of referring to unspecified data.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 

@@ -1,6 +1,6 @@
 # Certified Lean Six Sigma Green Belt (CLSSGB) Training — Learner Guide
 
-**WSQ Course Code:** TGS-2025055775  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v4 · 19 July 2026**
+**WSQ Course Code:** TGS-2025055775  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v5 · 23 September 2026**
 
 ## Contents
 
@@ -112,6 +112,7 @@ Five browser-based tools are used during the labs. No installation or licence is
 
 - Each lab states its objective, the deliverable you produce, the steps, and a check to confirm you are done.
 - Tables shown in the steps can be built in a spreadsheet or on the worksheet provided.
+- Each lab folder has a data/ folder with the Excel workbook(s) that lab works on.
 - Where a lab uses an online tool, the tool URL is shown with the step.
 - Keep every lab output — they combine into your final improvement package and are your revision material.
 
@@ -146,21 +147,25 @@ A belt responsibility matrix, a scored project selection screen and a costed bus
 
 *Lab 1 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab01-project-selection-candidates.xlsx — Four candidate improvement projects screened in Lab 1, with the cost inputs needed to estimate the Cost of Poor Quality for each.
+
 **Step-by-step**
 
 1. Compare the White, Yellow, Green, Black and Master Black Belt roles in a table — for each, record who leads, who analyses and who sponsors.
 2. Write down the three things a Green Belt does that a Yellow Belt does not: leads a scoped project, runs the statistical analysis, and owns the tollgate reviews.
-3. Read the Northwind scenario. List four candidate improvement projects that could be run in this distribution centre.
+3. Open lab01-project-selection-candidates.xlsx. It lists four candidate improvement projects for this distribution centre with their volume, defect rate and cost inputs.
 4. Score each candidate 1-5 against: measurable gap, data availability, manageable scope, sponsor support, and customer impact.
 5. Reject any candidate that is a known solution in disguise ('install a new WMS') — a DMAIC project must start from a problem, not an answer.
-6. Estimate the Cost of Poor Quality for your chosen project: rework hours, expedited freight, credits issued and lost repeat custom.
+6. Estimate the annualised COPQ for each candidate from the workbook: Annual Volume x Defect Rate x (Rework + Expedite + Credit) per unit.
 7. Write a four-line business case: the gap, the annualised COPQ, the improvement target and the resource ask.
 
 **Check your work**
 
 Your selected project scores highest on the criteria table, contains no pre-selected solution, and your business case states an annualised dollar figure.
 
-> **Note:** The full worksheet for this lab is in labs/lab-01-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-01-the-green-belt-role-project-selection-and-business-case/.
 
 ---
 
@@ -179,12 +184,16 @@ A Y = f(X) statement, a DPMO calculation and a baseline sigma level.   (Tools an
 
 *Lab 2 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab02-baseline-defect-summary.xlsx — The monthly baseline used to calculate the defect rate, DPMO and sigma level. These are the exact figures quoted in the assessment.
+
 **Step-by-step**
 
 1. Write the project Y — the single output metric the customer feels. For Northwind: order fulfilment lead time, or percentage of orders shipped on time.
 2. Brainstorm at least eight candidate Xs — the process inputs that could drive that Y (picking method, staffing, slotting, system downtime, order profile, shift, carrier cut-off).
 3. Write the relationship formally as Y = f(X1, X2, ... Xn) and state which Xs you can control and which you cannot.
-4. Take the baseline data: 4,200 orders shipped last month, 357 of them late. Calculate the defect rate as a proportion.
+4. Open lab02-baseline-defect-summary.xlsx: 4,200 orders shipped last month, 357 of them late. Calculate the defect rate as a proportion.
 5. Calculate DPMO using DPMO = (defects / (units x opportunities per unit)) x 1,000,000. Treat each order as one opportunity for a late-delivery defect.
 6. Look up the resulting DPMO on the sigma conversion table to read off the baseline sigma level.
 7. Map the five DMAIC phases against your project and name the tollgate deliverable that ends each phase.
@@ -193,7 +202,7 @@ A Y = f(X) statement, a DPMO calculation and a baseline sigma level.   (Tools an
 
 Your Y is a measurable customer-facing output, you have at least eight Xs, and your DPMO and sigma level are calculated from the 357/4,200 baseline.
 
-> **Note:** The full worksheet for this lab is in labs/lab-02-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-02-y-fx-sigma-level-dpmo-and-the-dmaic-roadmap/.
 
 ---
 
@@ -228,6 +237,10 @@ A VOC log, an affinity diagram of themes and a Kano classification table.   (Too
 
 *Lab 3 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab03-voc-raw-statements.xlsx — 18 verbatim customer statements gathered from surveys, the call centre, social media and B2B account reviews — the raw input to the affinity diagram and Kano analysis.
+
 **Step-by-step**
 
 1. List your VOC sources and split them into reactive (complaints, returns, social media) and proactive (surveys, interviews, gemba walks).
@@ -242,7 +255,7 @@ A VOC log, an affinity diagram of themes and a Kano classification table.   (Too
 
 You have at least twelve verbatims, every verbatim sits in a named affinity cluster, and every cluster carries a Kano classification.
 
-> **Note:** The full worksheet for this lab is in labs/lab-03-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-03-voice-of-the-customer-affinity-diagram-and-kano-analysis/.
 
 ---
 
@@ -261,6 +274,10 @@ A three-level CTQ tree with metric, target, USL and LSL for each requirement.   
 
 *Lab 4 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab04-ctq-requirements.xlsx — Customer needs from Lab 3 ready to be translated into measurable CTQs with targets and specification limits.
+
 **Step-by-step**
 
 1. Take your top VOC theme (for example 'my order arrives late') and write it at the root of the tree.
@@ -275,7 +292,7 @@ A three-level CTQ tree with metric, target, USL and LSL for each requirement.   
 
 Every CTQ has a unit of measure, a target, specification limits and an operational definition unambiguous enough for two people to apply identically.
 
-> **Note:** The full worksheet for this lab is in labs/lab-04-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-04-ctq-tree-translating-customer-needs-into-measurable-requirem/.
 
 ---
 
@@ -294,6 +311,10 @@ A complete one-page project charter with all seven sections signed off.   (Tools
 
 *Lab 5 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab05-charter-inputs.xlsx — The agreed facts and figures to drop into the project charter — baseline, target, financials, team and milestones.
+
 **Step-by-step**
 
 1. Write the problem statement with all four components: the process, the time period, the measurable gap and the business impact.
@@ -309,7 +330,7 @@ A complete one-page project charter with all seven sections signed off.   (Tools
 
 Your problem statement contains process, period, measurable gap and impact but no cause or solution; your goal statement contains metric, baseline, target and date.
 
-> **Note:** The full worksheet for this lab is in labs/lab-05-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-05-project-charter-problem-statement-goal-statement-and-scope/.
 
 ---
 
@@ -327,6 +348,10 @@ A validated SIPOC (exported from the builder), a stakeholder power/interest grid
 ![Lab 6 at a glance — the deliverable, the tools and the steps.](courseware/assets/lg-visuals/lab-06-visual.png)
 
 *Lab 6 at a glance — the deliverable, the tools and the steps.*
+
+**Data for this lab**
+
+- lab06-sipoc-stakeholders.xlsx — The high-level process steps for the SIPOC plus the stakeholder register to score for influence/interest and assign RACI.
 
 **Step-by-step**
 
@@ -351,7 +376,7 @@ A validated SIPOC (exported from the builder), a stakeholder power/interest grid
 
 'Check my SIPOC' passes, all five columns are populated with explicit boundaries and at least three pain points tagged, and your RACI has exactly one Accountable per deliverable.
 
-> **Note:** The full worksheet for this lab is in labs/lab-06-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-06-sipoc-stakeholder-analysis-and-raci/.
 
 ---
 
@@ -387,11 +412,15 @@ A detailed process map and a swimlane map with pain points and handoffs marked. 
 
 *Lab 7 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab07-process-steps-timing.xlsx — A gemba walk record of the 14 as-is process steps, with the actor, system, observed elapsed time and whether the step crosses to a new actor (a handoff).
+
 **Step-by-step**
 
 1. Review the standard process symbols: oval for start/stop, rectangle for activity, diamond for decision, D-shape for delay, and the document symbol.
 2. Walk the process physically (go to gemba) and record every step in sequence as it actually happens — not as the SOP says it should.
-3. Build the detailed process map with columns: Step, Actor, Activity, System, Time, Handoff (Y/N).
+3. Open lab07-process-steps-timing.xlsx — a gemba walk record of all 14 as-is steps with actor, system, elapsed time and handoff flag. Build the detailed process map from it.
 4. Continue in the SIPOC & Process Map Builder — assign an actor to each step and it generates the swimlane and the handoff table for you.
 
    ```bash
@@ -399,7 +428,7 @@ A detailed process map and a swimlane map with pain points and handoffs marked. 
    ```
 
 5. Redraw the same flow as a swimlane map, giving each actor or department its own lane.
-6. Count the handoffs — every time the flow crosses a lane boundary. Mark each one, since each is a queue and a risk of information loss.
+6. Count the handoffs in the workbook's Handoff column — every lane crossing is a queue and a risk of information loss.
 7. Mark every decision diamond that creates a rework loop and note what percentage of work takes the rework path.
 8. Tag pain points: delays, rework, unclear ownership, duplicate data entry and waiting for approval.
 9. Identify the three steps you suspect consume the most elapsed time — you will test that suspicion with data in Lab 9.
@@ -408,7 +437,7 @@ A detailed process map and a swimlane map with pain points and handoffs marked. 
 
 Every lane crossing on your swimlane map is marked as a handoff with a named owner on both sides, and every rework loop is labelled with its percentage.
 
-> **Note:** The full worksheet for this lab is in labs/lab-07-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-07-detailed-process-mapping-and-swimlane-analysis/.
 
 ---
 
@@ -427,15 +456,19 @@ A current-state VSM with a timeline ladder, a takt time calculation and a waste 
 
 *Lab 8 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab08-vsm-timeline-demand.xlsx — Process-box data and the demand figures needed for the timeline ladder, process cycle efficiency and takt time calculations.
+
 **Step-by-step**
 
 1. Review the standard VSM icons: process box, data box, inventory triangle, push arrow, supermarket, kanban and the kaizen burst.
-2. Draw the process boxes left to right, then add a data box under each with cycle time, changeover time, uptime and number of operators.
+2. Open lab08-vsm-timeline-demand.xlsx. Draw the process boxes left to right and add each one's data box: cycle time, changeover, uptime and operators.
 3. Add the information flow across the top — how does each step know what to work on next?
 4. Add inventory triangles between steps with the observed queue quantity, and convert each to days of supply.
 5. Draw the timeline ladder along the bottom: value-added time on the lower rungs, waiting time on the upper rungs.
-6. Sum both rows and calculate process cycle efficiency = value-added time / total lead time. Typical service processes run under 10%.
-7. Calculate takt time = available working time per shift / customer demand per shift, then compare each step's cycle time against takt.
+6. Sum both rows and calculate process cycle efficiency = value-added time / total lead time using the workbook's Waiting Time column. Typical service processes run under 10%.
+7. Calculate takt time = available working time / customer demand (1,350 min/day and 140 orders/day, given in the workbook notes), then compare each step's cycle time against takt.
 8. Run a waste walk and tag every observation against the eight wastes (DOWNTIME): Defects, Overproduction, Waiting, Non-utilised talent, Transport, Inventory, Motion, Extra-processing.
 9. Mark kaizen bursts on the VSM where waste is concentrated — these become improvement candidates in the Improve phase.
 
@@ -443,7 +476,7 @@ A current-state VSM with a timeline ladder, a takt time calculation and a waste 
 
 Your VSM shows both material and information flow, your timeline ladder yields a process cycle efficiency percentage, and every step's cycle time is compared against takt.
 
-> **Note:** The full worksheet for this lab is in labs/lab-08-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-08-value-stream-mapping-takt-time-and-the-eight-wastes/.
 
 ---
 
@@ -462,11 +495,15 @@ A data type classification, operational definitions and a complete data collecti
 
 *Lab 9 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab09-data-collection-fields.xlsx — The fields available in the WMS/OMS extract, to be classified by data type and given operational definitions.
+
 **Step-by-step**
 
 1. Classify data as qualitative or quantitative, then quantitative as discrete (countable) or continuous (measurable on a scale).
 2. Classify qualitative data as nominal (no order — carrier name, defect type) or ordinal (ordered — priority, satisfaction rating).
-3. For your project Y and each candidate X, record the data type. Note where a discrete measure could be converted to continuous — always prefer continuous.
+3. Open lab09-data-collection-fields.xlsx and classify every available field as Continuous, Discrete, Nominal or Ordinal in the blank Data Type column.
 4. Write the operational definition for each measure: what exactly is counted, when the clock starts and stops, which system field, and what is excluded.
 5. Test each definition by having two people apply it to the same five records — if they disagree, the definition is not yet operational.
 6. Build the data collection plan table: measure, data type, operational definition, source, who collects, how often, sample size, and how it is recorded.
@@ -477,7 +514,7 @@ A data type classification, operational definitions and a complete data collecti
 
 Two people applying your operational definitions to the same records produce identical values, and your plan captures stratification factors alongside the main measure.
 
-> **Note:** The full worksheet for this lab is in labs/lab-09-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-09-data-types-operational-definitions-and-the-data-collection-p/.
 
 ---
 
@@ -496,12 +533,16 @@ A justified sampling plan and calculated sample sizes for continuous and discret
 
 *Lab 10 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab10-sampling-frame.xlsx — The population broken down by shift and carrier, so a stratified sampling plan can be built and proportional sample sizes allocated.
+
 **Step-by-step**
 
 1. Review the four sampling techniques: simple random, stratified (sample within subgroups), systematic (every Nth), and cluster.
 2. Choose stratified sampling if your process has distinct subgroups — for Northwind, sample within each shift and each carrier so no group is missed.
 3. Note which techniques are non-random (convenience, judgment) and why they must not be used when the data will feed statistical analysis.
-4. For continuous data, apply the formula from the deck: n = (1.96s / d)^2, where s is the estimated standard deviation, d is the margin of error and 1.96 gives 95% confidence.
+4. Open lab10-sampling-frame.xlsx for the population by shift and carrier, then apply n = (1.96s / d)^2 using the preliminary standard deviation given in the notes.
 5. Worked example: you want to estimate average order cycle time within 5 hours (d = 5) and a preliminary estimate of the standard deviation is 10 hours (s = 10). Calculate n.
 
    ```bash
@@ -517,7 +558,7 @@ A justified sampling plan and calculated sample sizes for continuous and discret
 
 Your sample size is calculated from the formula rather than assumed, and your sampling technique is random or stratified — never convenience.
 
-> **Note:** The full worksheet for this lab is in labs/lab-10-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-10-sampling-techniques-and-sample-size-calculation/.
 
 ---
 
@@ -536,15 +577,19 @@ An attribute Gage R&R study with repeatability, reproducibility and accuracy per
 
 *Lab 11 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab11-gage-rr-attribute.xlsx — 30 order records classified as On time / Late by three appraisers, twice each, against the known correct attribute. The raw input to the agreement calculations.
+
 **Step-by-step**
 
 1. Draw the components of variation tree: total observed variation = actual process variation + measurement system variation.
 2. Split measurement variation into its parts — repeatability (one appraiser, repeated measures) and reproducibility (between appraisers).
 3. Check resolution first using the ten-bucket rule: the measurement device must resolve to about one tenth of the tolerance you need to detect.
 4. Set up an attribute Gage R&R: take at least 20 sample records, label them opaquely so appraisers cannot recognise them, and record the known correct attribute for each.
-5. Have two or three appraisers independently classify every sample — for Northwind, classify each order as on-time or late from the system record.
+5. Open lab11-gage-rr-attribute.xlsx — 30 order records already classified On time/Late by three appraisers, twice each, against the known correct attribute.
 6. Repeat the exercise with the sample order randomised so appraisers cannot recall their first answer.
-7. Calculate repeatability per appraiser: the percentage of samples where that appraiser agreed with themselves across both trials.
+7. Calculate repeatability per appraiser from the workbook: the percentage of the 30 samples where that appraiser agreed with THEMSELVES across both trials.
 8. Calculate reproducibility: the percentage of samples where all appraisers agreed with each other.
 9. Calculate accuracy: the percentage where each appraiser matched the known correct attribute.
 10. Apply the acceptance criteria — a system agreeing only around 50% of the time is not fit for use. Record what must be fixed: the operational definition, training or the device.
@@ -553,7 +598,7 @@ An attribute Gage R&R study with repeatability, reproducibility and accuracy per
 
 You can state your repeatability, reproducibility and accuracy percentages and give a clear go/no-go verdict on whether the measurement system can be trusted.
 
-> **Note:** The full worksheet for this lab is in labs/lab-11-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-11-measurement-system-analysis-and-gage-rr/.
 
 ---
 
@@ -572,10 +617,14 @@ A metrics worksheet with yield, FPY, RTY, DPU, DPO and DPMO calculated for the p
 
 *Lab 12 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab12-process-step-yields.xlsx — Units entering and passing each process step first time, for the classic yield, FPY, RTY and hidden-factory calculations.
+
 **Step-by-step**
 
 1. Run the DUDO analysis first: define the Defect, the Unit, the Defect Opportunities per unit and the Observed defects — every metric depends on these four definitions.
-2. Calculate classic yield: units passing final inspection / units started, expressed as a percentage.
+2. Open lab12-process-step-yields.xlsx. Calculate classic yield: units passing final inspection / units started, as a percentage.
 3. Calculate first pass yield for each process step: units passing that step first time without rework / units entering that step.
 4. Calculate rolled throughput yield by multiplying the FPY of every step together — RTY = FPY1 x FPY2 x ... x FPYn.
 5. Compare RTY against classic yield. The gap between them is the hidden factory: the rework you were paying for but not measuring.
@@ -594,7 +643,7 @@ A metrics worksheet with yield, FPY, RTY, DPU, DPO and DPMO calculated for the p
 
 Your RTY is lower than your classic yield, you can explain the hidden factory gap between them, and your DPMO converts to a stated sigma level.
 
-> **Note:** The full worksheet for this lab is in labs/lab-12-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-12-yield-dpu-dpo-dpmo-rty-and-the-hidden-factory/.
 
 ---
 
@@ -613,15 +662,19 @@ A descriptive statistics summary, a normality assessment and calculated Cp and C
 
 *Lab 13 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab13-order-lead-times.xlsx — The complete baseline month: 4,200 orders with lead time, status and stratification factors. This is the master dataset used by Labs 13-18 and 23.
+
 **Step-by-step**
 
-1. Calculate the measures of central tendency for your baseline data: mean, median and mode. Note which is more resistant to outliers.
+1. Open lab13-order-lead-times.xlsx — all 4,200 baseline orders. Calculate mean, median and mode of the Lead Time column, and note which resists outliers.
 2. Calculate the measures of dispersion: range and standard deviation. Variation, not the average, is what the customer feels.
 3. Build a histogram of the baseline data and choose the bin count carefully — too few bins show nothing, too many look like a comb.
 4. Read the histogram shape: bell-shaped, skewed, or bi-modal. A bi-modal shape usually means you are measuring two processes as if they were one — stratify and re-plot.
 5. Recall the empirical rule for a normal curve: 68.26% of data within +/-1 standard deviation, 95.46% within +/-2, and 99.73% within +/-3.
 6. Assess normality — if the data is clearly non-normal, note that hypothesis tests assuming normality will not be valid in Lab 17.
-7. Mark the specification limits (USL and LSL) from your CTQ in Lab 4 onto the histogram and count how many observations fall outside.
+7. Mark USL = 48 hrs and LSL = 0 from your Lab 4 CTQ onto the histogram, then count observations outside — the Status column should confirm exactly 357.
 8. Calculate Cp using the formula from the deck: Cp = (USL - LSL) / 6s, that is specification width divided by process spread.
 9. Worked example: USL = 48 hours, LSL = 0 hours, standard deviation s = 6 hours. Calculate Cp.
 
@@ -637,7 +690,7 @@ A descriptive statistics summary, a normality assessment and calculated Cp and C
 
 You can state your baseline Cp and Cpk, explain the difference between them, and say whether the problem is spread, centring or both.
 
-> **Note:** The full worksheet for this lab is in labs/lab-13-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-13-descriptive-statistics-normality-and-baseline-process-capabi/.
 
 ---
 
@@ -673,9 +726,13 @@ A run chart of the baseline data with the six non-random patterns assessed.   (T
 
 *Lab 14 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab14-daily-mean-lead-time.xlsx — Mean lead time and late count for each of the 30 days of the baseline month, in time order — the input to the run chart and stability analysis.
+
 **Step-by-step**
 
-1. Plot your baseline Y data in time order — time order matters, so never sort the data first.
+1. Open lab14-daily-mean-lead-time.xlsx and plot the 30 daily means in time order — time order matters, so never sort this data.
 2. Draw the median line through the plotted points.
 3. Test for a TREND: six or more consecutive points steadily increasing or decreasing.
 4. Test for a SHIFT: eight or more consecutive points on the same side of the median, indicating the process level changed.
@@ -691,7 +748,7 @@ A run chart of the baseline data with the six non-random patterns assessed.   (T
 
 You can state whether your process is stable, name every non-random pattern you tested for, and explain what tampering is and why it makes things worse.
 
-> **Note:** The full worksheet for this lab is in labs/lab-14-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-14-variation-run-charts-and-stability-analysis/.
 
 ---
 
@@ -710,14 +767,19 @@ A Pareto chart with cumulative line, stratified Pareto charts and comparative bo
 
 *Lab 15 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab15-late-causes-pareto.xlsx — Every one of the 357 late orders assigned to a root-cause category, with the cost impact — the input to the Pareto chart and the vital-few decision.
+- lab15-late-by-stratum.xlsx — The same 357 late orders cut by shift and by carrier, to test whether the problem is uniform across the operation or concentrated in particular cells.
+
 **Step-by-step**
 
-1. Categorise the defects from your data collection: for Northwind, the reasons orders shipped late.
+1. Open lab15-late-causes-pareto.xlsx — all 357 late orders already assigned to a root-cause category with their cost impact.
 2. Count the frequency of each category and sort the categories in descending order of frequency.
 3. Calculate the cumulative percentage across the sorted categories.
 4. Draw the Pareto chart: descending bars on the left axis, cumulative percentage line on the right axis.
 5. Read where the cumulative line crosses 80% — the categories to the left of that point are your vital few.
-6. Stratify: rebuild the Pareto separately for each shift, each carrier and each product family.
+6. Open lab15-late-by-stratum.xlsx and rebuild the Pareto separately for each shift and each carrier.
 7. Compare the stratified charts. If one shift or carrier dominates, the problem is concentrated and your project scope should narrow to it.
 8. Build a boxplot of cycle time by stratification factor — read the median, the interquartile box, the whiskers and any outliers.
 9. Use the boxplots to compare groups visually: if the boxes barely overlap, the groups are probably genuinely different — a hypothesis you will test formally in Lab 17.
@@ -727,7 +789,7 @@ A Pareto chart with cumulative line, stratified Pareto charts and comparative bo
 
 Your Pareto identifies the vital few crossing 80% cumulative, and your stratified charts show whether the problem is universal or concentrated in a subgroup.
 
-> **Note:** The full worksheet for this lab is in labs/lab-15-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-15-pareto-analysis-stratification-and-boxplots/.
 
 ---
 
@@ -746,16 +808,20 @@ A Fishbone diagram, three 5 Whys chains and a multi-voted shortlist of causes to
 
 *Lab 16 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab16-cause-investigation-log.xlsx — Candidate causes raised by the team in the Fishbone session, ready for 5 Whys drill-down and multi-voting.
+
 **Step-by-step**
 
-1. Write the effect — your project problem — in the fish head. State it as a measurable problem, not a vague complaint.
+1. Open lab16-cause-investigation-log.xlsx — ten candidate causes raised by the team. Write the effect in the fish head as a measurable problem, not a vague complaint.
 2. Draw the main bones using the 5M+E categories: Manpower, Method, Machine, Material, Measurement and Environment.
 3. Brainstorm causes onto each bone. Set brainstorming ground rules first: no criticism, quantity over quality, build on others' ideas.
 4. For each major bone, ask 'why does this happen?' to add sub-causes — a bone with no sub-causes has not been explored.
 5. Select the three most promising causes and run a 5 Whys chain on each, asking why repeatedly until you reach an actionable process cause.
 6. Stop each 5 Whys chain when the answer becomes a process or system, not a person — 'the picker was careless' is a symptom, not a root cause.
 7. Check each chain for logical validity by reading it backwards with 'therefore' — if it does not read logically, the chain is broken.
-8. Run multi-voting to converge: each participant gets N/3 votes to distribute across the candidate causes.
+8. Run multi-voting in the workbook's Team Votes column: each participant gets N/3 votes to distribute across the candidate causes.
 9. Rank the causes by votes and select the top three to five for statistical validation.
 10. For each shortlisted cause, write the hypothesis you will test in Lab 17 and name the data you need to test it.
 11. Record explicitly that a cause is only a ROOT cause once data supports it — until then it remains a theory.
@@ -764,7 +830,7 @@ A Fishbone diagram, three 5 Whys chains and a multi-voted shortlist of causes to
 
 Every Fishbone bone has sub-causes, each 5 Whys chain ends at a process cause rather than a person, and each shortlisted cause has a testable hypothesis written for it.
 
-> **Note:** The full worksheet for this lab is in labs/lab-16-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-16-fishbone-5-whys-multivoting-and-cause-prioritisation/.
 
 ---
 
@@ -783,6 +849,11 @@ Stated hypotheses, a justified test selection, and a documented statistical conc
 
 *Lab 17 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab17-shift-comparison-samples.xlsx — Two independent random samples of 40 orders each — Night shift and Day shifts — drawn from the baseline month, for the hypothesis test.
+- lab17-cause-count-contingency.xlsx — A contingency table of late and on-time counts by carrier — discrete data, so this one needs a chi-square test of independence rather than a t-test.
+
 **Step-by-step**
 
 1. Write the null hypothesis H0 as a statement of NO difference or no effect — it always contains an equals relationship.
@@ -795,8 +866,8 @@ Stated hypotheses, a justified test selection, and a documented statistical conc
 8. Note the classic trap: the same team measured before and after training needs a PAIRED t-test, while team A versus team B needs a 2-SAMPLE t-test.
 9. For non-normal data comparing medians, use the non-parametric equivalents: One-Sample Wilcoxon or Mann-Whitney.
 10. For comparing proportions use 1-Proportion or 2-Proportion; for comparing variances use the chi-square or F-test; for more than two groups use ANOVA.
-11. Test your Northwind hypothesis: is the mean order cycle time on the night shift significantly greater than on the day shift? State H0, Ha and the test you selected.
-12. Run the test and read the p-value. Apply the decision rule: if p < alpha, reject H0 and accept Ha; if p > alpha, fail to reject H0.
+11. Open lab17-shift-comparison-samples.xlsx — 40 night-shift and 40 day-shift orders. Test whether night-shift mean lead time is significantly greater. State H0, Ha and your chosen test.
+12. Run the test and read the p-value. Then repeat the exercise on lab17-cause-count-contingency.xlsx, where the discrete data forces a chi-square test instead. If p < alpha, reject H0.
 13. Worked interpretation: with alpha set at 0.05, a returned p-value of 0.031 means reject H0 — the difference is statistically significant.
 14. Translate the statistical result into business language for your sponsor — never present a p-value without saying what it means for the process.
 15. Record the caution: failing to reject H0 does not prove H0 is true; it means you lack sufficient evidence to reject it, which may simply mean too small a sample.
@@ -805,7 +876,7 @@ Stated hypotheses, a justified test selection, and a documented statistical conc
 
 For each tested cause you can state H0, Ha, the test selected with justification, the p-value, the decision against alpha, and the business conclusion in plain language.
 
-> **Note:** The full worksheet for this lab is in labs/lab-17-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-17-hypothesis-testing-test-selection-pvalues-and-conclusions/.
 
 ---
 
@@ -824,16 +895,20 @@ A scatter plot, a correlation coefficient, a regression equation and a predictio
 
 *Lab 18 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab18-replen-vs-leadtime.xlsx — Daily replenishment backlog (the candidate X) paired with that day's mean lead time (the Y), for the scatter plot, correlation and regression.
+
 **Step-by-step**
 
-1. Build a scatter plot with the suspected X on the horizontal axis and the project Y on the vertical axis.
+1. Open lab18-replen-vs-leadtime.xlsx. Build a scatter plot with replenishment backlog (X) on the horizontal axis and mean lead time (Y) on the vertical axis.
 2. Read the plot visually first: is the pattern positive, negative, or absent? Is it linear or curved? Are there outliers?
 3. Calculate the correlation coefficient R. Recall R ranges from -1 to +1: +1 is perfect positive, -1 perfect negative, 0 no relationship.
 4. Apply the decision threshold from the reference: correlation is considered to occur when R is 0.4 or greater, or -0.4 or less.
 5. Calculate the coefficient of determination r-squared by squaring R.
 6. Interpret r-squared as the proportion of variation in Y explained by X. If R = 0.86 then r-squared = 0.74, so about 74% of the variation in Y relates to X and 26% is unexplained.
 7. Confirm the data type requirement: both correlation and regression need continuous or ratio data. Category names against outputs do not qualify — use Pareto instead.
-8. Fit the regression line and record the equation in the form y = mx + c.
+8. Fit the regression line to the workbook data and record the equation in the form y = mx + c — the slope tells you how many hours each extra backlog task adds.
 9. Use the equation to predict Y at two specific X values, and check the predictions against actual observed data at those points.
 10. Solve the equation in reverse to find the X range that delivers your target Y — this becomes the operating window you will control in the Control phase.
 11. Test the model's honesty: for a low r-squared, show a point where the prediction badly misses the actual value and explain why the model must not be used there.
@@ -844,7 +919,7 @@ A scatter plot, a correlation coefficient, a regression equation and a predictio
 
 You can state R, r-squared and the regression equation, use it to predict Y, and explain in one sentence why the correlation alone does not prove causation.
 
-> **Note:** The full worksheet for this lab is in labs/lab-18-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-18-correlation-regression-and-quantifying-the-xy-relationship/.
 
 ---
 
@@ -880,9 +955,13 @@ A solution log of at least fifteen candidate solutions mapped to proven root cau
 
 *Lab 19 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab19-improvement-ideas.xlsx — Ideas generated by the team's brainwriting session plus external benchmark findings, ready to be screened in Lab 21.
+
 **Step-by-step**
 
-1. List your validated root causes from Lab 17 and 18 — every solution must trace to one of them. Solutions without a cause are pet projects.
+1. List your validated root causes from Labs 17 and 18, then open lab19-improvement-ideas.xlsx — the team's ideas and benchmark findings, each tagged to the cause it targets. Solutions without a cause are pet projects.
 2. Run a structured brainstorm with the ground rules displayed: no criticism during generation, quantity over quality, build on others' ideas, wild ideas welcome.
 3. Run brainwriting for the quieter participants: each person writes three ideas silently, then passes the sheet on for others to build upon.
 4. Apply anti-brainstorming: ask how you could make the problem WORSE, then invert each answer into an improvement.
@@ -896,7 +975,7 @@ A solution log of at least fifteen candidate solutions mapped to proven root cau
 
 You have at least fifteen distinct solutions, every one traces to a root cause proven with data, and at least three came from benchmarking.
 
-> **Note:** The full worksheet for this lab is in labs/lab-19-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-19-solution-generation-benchmarking-and-brainwriting/.
 
 ---
 
@@ -915,9 +994,13 @@ A countermeasure plan applying 5S, poka-yoke, pull and standard work to your pro
 
 *Lab 20 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab20-5s-waste-audit.xlsx — A 5S audit of the four warehouse areas plus the waste walk observations tagged against the eight DOWNTIME wastes.
+
 **Step-by-step**
 
-1. Apply 5S to the physical or digital workspace: Sort (remove what is not needed), Set in order (a place for everything), Shine (clean and inspect), Standardise (make it visual), Sustain (audit it).
+1. Open lab20-5s-waste-audit.xlsx — 5S scores for each warehouse area plus the waste walk log. Score each area out of 25; any area under 15 needs a 5S event first.
 2. Design a poka-yoke for your highest-severity defect. Work through the three levels: prevent the error occurring, detect it as it occurs, or detect it before it passes downstream.
 3. Prefer prevention over detection — a connector that only fits one way beats a checklist asking the operator to check the orientation.
 4. Evaluate whether a pull system would help: does work get pushed into the process faster than it can be consumed, creating queues?
@@ -932,7 +1015,7 @@ A countermeasure plan applying 5S, poka-yoke, pull and standard work to your pro
 
 Every countermeasure traces to a specific waste, and your poka-yoke prevents or detects the error rather than relying on someone remembering to check.
 
-> **Note:** The full worksheet for this lab is in labs/lab-20-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-20-lean-countermeasures-5s-pokayoke-pull-jit-and-standard-work/.
 
 ---
 
@@ -951,9 +1034,13 @@ A weighted solution selection matrix with ranked results and a cost-benefit anal
 
 *Lab 21 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab21-solution-selection-scoring.xlsx — The shortlisted ideas from Lab 19 with the weighted criteria to score against and the financial inputs for the cost-benefit analysis.
+
 **Step-by-step**
 
-1. List your candidate solutions from Labs 19 and 20 down the rows of the matrix.
+1. Open lab21-solution-selection-scoring.xlsx — the eight shortlisted solutions with their cost and annual benefit, and blank columns to score.
 2. Define the selection criteria across the columns: Feasibility (is it practical to implement?), Cost (is it cost-effective?), Impact (does it significantly reduce the defect?), and Time to implement (how quickly?).
 3. Assign a weight to each criterion reflecting what matters to the sponsor — impact and cost usually carry the highest weights.
 4. Agree the scoring scale before scoring anything, and write down what a 1 and a 5 mean for each criterion so scores are comparable.
@@ -961,7 +1048,7 @@ A weighted solution selection matrix with ranked results and a cost-benefit anal
 6. Calculate the weighted score for each solution: multiply each score by its criterion weight and sum across the row.
 7. Rank the solutions by total weighted score and identify the top three.
 8. Cross-check the ranking on an effort-impact grid — look for the high-impact, low-effort quick wins in the top-left quadrant.
-9. Run a cost-benefit analysis on the top solution: implementation cost, ongoing cost, expected annual benefit and payback period.
+9. Run the cost-benefit analysis from the workbook: payback period = Est. Cost / (Annual Benefit / 12) in months. Check whether the payback ranking agrees with your weighted-score ranking.
 10. Sanity-check the selected solution against the root cause it addresses and confirm it does not simply move the problem downstream.
 11. Document the rationale for the selection — a sponsor will ask why the obvious expensive option was not chosen.
 
@@ -969,7 +1056,7 @@ A weighted solution selection matrix with ranked results and a cost-benefit anal
 
 Your matrix has weighted criteria with a defined scoring scale, every solution is scored, and your top-ranked solution has a payback period calculated.
 
-> **Note:** The full worksheet for this lab is in labs/lab-21-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-21-solution-selection-matrix-and-costbenefit-analysis/.
 
 ---
 
@@ -988,15 +1075,20 @@ A completed FMEA with RPN scores, a DOE plan and a pilot plan with success crite
 
 *Lab 22 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab22-fmea-worksheet.xlsx — Failure modes for the selected solution, ready to be scored for Severity, Occurrence and Detection, plus the factors and levels for the DOE.
+- lab22-doe-pilot-results.xlsx — The four runs of the 2x2 full factorial pilot, each run for one week, with the resulting mean lead time and late percentage.
+
 **Step-by-step**
 
 1. List every process step of the NEW improved process in the FMEA worksheet.
 2. For each step, identify the potential failure modes — the ways this step could go wrong.
 3. For each failure mode, record the potential effect on the customer and the potential cause.
-4. Score Severity 1-10: how serious is the effect on the customer if this failure occurs?
+4. Open lab22-fmea-worksheet.xlsx — six failure modes for the selected solution with blank Sev/Occ/Det columns. Score Severity 1-10: how serious is the effect on the customer?
 5. Score Occurrence 1-10: how likely is this cause to happen?
 6. Score Detection 1-10, remembering the scale is inverted — 1 means it is almost certainly caught, 10 means it escapes undetected.
-7. Calculate the Risk Priority Number: RPN = Severity x Occurrence x Detection.
+7. Calculate the Risk Priority Number in the workbook's RPN column: RPN = Severity x Occurrence x Detection.
 8. Sort by RPN descending and address the highest scores first. Treat any Severity of 9 or 10 as requiring action regardless of its RPN.
 9. Write the recommended action for each high-RPN row, assign an owner and a date, then recalculate the projected RPN after the action.
 10. Plan a designed experiment for the settings you must optimise: list the factors, choose two levels (high and low) for each, and note that a 2^k design tests all combinations.
@@ -1011,7 +1103,7 @@ A completed FMEA with RPN scores, a DOE plan and a pilot plan with success crite
 
 Every FMEA row has an RPN, the highest RPNs have owned actions with dates, and your pilot has quantified success criteria measured against the Lab 13 baseline.
 
-> **Note:** The full worksheet for this lab is in labs/lab-22-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-22-fmea-risk-priority-numbers-doe-and-piloting/.
 
 ---
 
@@ -1047,6 +1139,10 @@ A correctly selected control chart with calculated limits and the eight rules ap
 
 *Lab 23 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab23-spc-subgroups.xlsx — 30 days of post-improvement data, 5 orders sampled per day, for the Xbar-R control chart. One day contains a genuine special cause.
+
 **Step-by-step**
 
 1. Establish the difference between control limits and specification limits: control limits come from the process itself (the voice of the process), specification limits come from the customer (the voice of the customer). Never plot spec limits on a control chart.
@@ -1057,7 +1153,7 @@ A correctly selected control chart with calculated limits and the eight rules ap
 6. For defective units (pass/fail): use a p-chart when the sample size varies, and an np-chart when the sample size is constant.
 7. For counts of defects: use a u-chart when the sample size varies, and a c-chart when the sample size is constant.
 8. Select the correct chart for your Northwind data and write down the justification against the tree.
-9. Build the chart: plot the points in time order, calculate and draw the centre line, then the upper and lower control limits at +/- 3 standard deviations.
+9. Open lab23-spc-subgroups.xlsx — 30 days of post-improvement data, 5 orders per day, with Xbar and Range already computed. Plot in time order and draw the centre line and control limits using A2/D3/D4 for n=5.
 10. Divide the chart into zones: zone C within 1 sigma of the centre line, zone B between 1 and 2 sigma, zone A between 2 and 3 sigma.
 11. Apply out-of-control rule 1: any single point beyond the UCL or LCL. Investigate immediately — the probability of this happening by chance is roughly 3 in 1,000.
 12. Apply rule 2: nine consecutive points on the same side of the centre line, indicating the process level has shifted.
@@ -1071,7 +1167,7 @@ A correctly selected control chart with calculated limits and the eight rules ap
 
 You can justify your chart choice against the selection tree, your limits are calculated at +/- 3 sigma, and you have applied all eight out-of-control rules.
 
-> **Note:** The full worksheet for this lab is in labs/lab-23-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-23-statistical-process-control-chart-selection-and-control-limi/.
 
 ---
 
@@ -1090,9 +1186,13 @@ A complete control plan, an SOP for the improved method and a visual management 
 
 *Lab 24 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab24-control-plan-template.xlsx — The control plan skeleton to complete, with the metrics, owners and reaction triggers agreed at the Improve tollgate.
+
 **Step-by-step**
 
-1. Build the control plan table with one row per control point and these columns: process step, CTQ metric, specification, measurement method, sample size, frequency, owner and reaction plan.
+1. Open lab24-control-plan-template.xlsx — six control points with metrics, targets, owners and a blank Reaction Plan column to complete.
 2. Select the key process metrics to track. For Northwind: order processing time, number of late orders, picking time and shipping errors.
 3. Define the data collection method for each metric: who collects it, how often, and where it is recorded.
 4. Set the control limits — the acceptable performance thresholds that trigger a response.
@@ -1110,7 +1210,7 @@ A complete control plan, an SOP for the improved method and a visual management 
 
 Every control point has a named owner, a monitoring frequency and a specific reaction plan stating what to do when the metric breaches its limit.
 
-> **Note:** The full worksheet for this lab is in labs/lab-24-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-24-control-plan-sop-visual-management-and-response-plan/.
 
 ---
 
@@ -1129,11 +1229,15 @@ A before/after capability comparison, a validated benefit, an A3 storyboard and 
 
 *Lab 25 at a glance — the deliverable, the tools and the steps.*
 
+**Data for this lab**
+
+- lab25-before-after-verification.xlsx — The baseline month against the post-improvement month, for the verification hypothesis test, the recalculated capability and the A3 storyboard.
+
 **Step-by-step**
 
 1. Collect post-improvement data using exactly the same operational definitions and sampling method as your baseline — otherwise the comparison is meaningless.
 2. Recalculate the process metrics: yield, RTY, DPMO and sigma level, using the same DUDO definitions from Lab 12.
-3. Recalculate Cp and Cpk and compare against the baseline values from Lab 13.
+3. Open lab25-before-after-verification.xlsx — the baseline month against the post-improvement month. Recalculate Cp and Cpk and compare against your Lab 13 baseline.
 4. Run a hypothesis test comparing before and after performance — state H0 as 'no difference' and prove the improvement is statistically significant, not random variation.
 5. Report the p-value and confirm you can reject H0 at your chosen alpha. An improvement you cannot prove statistically is not yet an improvement.
 6. Quantify the financial benefit and have Finance validate it — a benefit the finance team has not signed off will not be recognised by the business.
@@ -1151,7 +1255,7 @@ A before/after capability comparison, a validated benefit, an A3 storyboard and 
 
 Your after-capability beats the baseline, the improvement is proven with a hypothesis test and a stated p-value, and the process owner has signed the handover.
 
-> **Note:** The full worksheet for this lab is in labs/lab-25-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-25-verify-the-gain-a3-storyboard-handover-and-project-closure/.
 
 ---
 

@@ -11,6 +11,7 @@ import glob
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import course_data as C
+import lab_data as L
 from data_domain1 import DOMAIN1
 from data_domain2 import DOMAIN2
 from data_domain3 import DOMAIN3
@@ -57,6 +58,14 @@ def slug(title):
     return "-".join(t.split())[:60]
 
 
+def folder(a):
+    """Each lab owns a folder: labs/lab-NN-<slug>/ with README.md + data/."""
+    return f"lab-{a['num']:02d}-{slug(a['title'])}"
+
+
+FOLDER = {a["num"]: folder(a) for a in ACT}
+
+
 def lab_md(a):
     kind = "Elective" if a.get("elective") else "Core"
     title = a["title"].replace("Elective — ", "")
@@ -87,6 +96,29 @@ def lab_md(a):
     out.append("")
     out.append(f"**Tools and techniques:** {a['services']}")
     out.append("")
+
+    # ---- the lab's data files (generated from lab_data.py)
+    dsets = L.for_lab(a["num"])
+    if dsets:
+        out.append("## Data for this lab")
+        out.append("")
+        out.append("Open the workbook(s) below from this lab's `data/` folder. Every lab "
+                   "uses the same Northwind baseline month, so the figures reconcile "
+                   "across the whole course.")
+        out.append("")
+        for ds in dsets:
+            fn = L.filename(ds, "xlsx")
+            out.append(f"- **[`{fn}`](data/{fn})** — {ds['desc']}")
+        out.append("")
+        for ds in dsets:
+            if not ds["notes"]:
+                continue
+            out.append(f"**Working with `{L.filename(ds,'xlsx')}`:**")
+            out.append("")
+            for n in ds["notes"]:
+                out.append(f"- {n}")
+            out.append("")
+
     # any tool URLs used by this lab
     used = []
     for _, cmd in a["steps"]:
@@ -142,6 +174,23 @@ def readme_md():
                "Retail Distribution Centre scenario, so your outputs accumulate into one complete "
                "improvement package.")
     out.append("")
+    out.append("## How the labs are organised")
+    out.append("")
+    out.append("Each lab has its own folder containing the lab sheet (`README.md`) and a "
+               "`data/` folder with the Excel workbook(s) that lab works on:")
+    out.append("")
+    out.append("```")
+    out.append("labs/")
+    out.append("  lab-01-the-green-belt-role.../")
+    out.append("    README.md        the lab sheet")
+    out.append("    data/*.xlsx      the mock data for this lab")
+    out.append("```")
+    out.append("")
+    out.append("All the data is one reconciled month of Northwind order-fulfilment records "
+               "— **4,200 orders, 357 of them late (8.5%)** — the same baseline quoted in the "
+               "assessment. Your Lab 2 sigma level, your Lab 15 Pareto and your Lab 25 "
+               "before/after all come from that one dataset, so the numbers agree end to end.")
+    out.append("")
     out.append("## Lab types")
     out.append("")
     out.append("- **Core** — completed by everyone; maps directly to the assessment.")
@@ -150,15 +199,19 @@ def readme_md():
     out.append("")
     out.append("## Lab index")
     out.append("")
-    out.append("| # | Lab | DMAIC phase | Type |")
-    out.append("|---|-----|-------------|------|")
+    out.append("| # | Lab | DMAIC phase | Type | Data |")
+    out.append("|---|-----|-------------|------|------|")
     files = {}
     for a in ACT:
-        fn = f"lab-{a['num']:02d}-{slug(a['title'])}.md"
-        files[a["num"]] = fn
+        fd = FOLDER[a["num"]]
+        files[a["num"]] = f"{fd}/README.md"
         kind = "Elective" if a.get("elective") else "Core"
         title = a["title"].replace("Elective — ", "")
-        out.append(f"| {a['num']} | [{title}]({fn}) | {TOPICS[a['topic']]['phase']} | {kind} |")
+        ds = L.for_lab(a["num"])
+        dcol = (f"[{len(ds)} file{'s' if len(ds) > 1 else ''}]({fd}/data/)"
+                if ds else "—")
+        out.append(f"| {a['num']} | [{title}]({fd}/README.md) | "
+                   f"{TOPICS[a['topic']]['phase']} | {kind} | {dcol} |")
     out.append("")
     out.append("## The interactive toolkit")
     out.append("")
@@ -265,16 +318,22 @@ def tools_md():
 
 # ---------------------------------------------------------------- write
 os.makedirs(LABS, exist_ok=True)
+# remove the previous FLAT lab files (superseded by the per-lab folder layout)
 for old in glob.glob(os.path.join(LABS, "lab-*.md")):
     os.remove(old)
 
 readme, files = readme_md()
 written = 0
 for a in ACT:
-    path = os.path.join(LABS, files[a["num"]])
-    with open(path, "w") as f:
+    d = os.path.join(LABS, FOLDER[a["num"]])
+    os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, "README.md"), "w") as f:
         f.write(lab_md(a))
     written += 1
+
+# the Excel datasets that the lab sheets link to
+import build_lab_data
+data_files = build_lab_data.main(LABS, FOLDER)
 
 with open(os.path.join(LABS, "README.md"), "w") as f:
     f.write(readme)
@@ -317,6 +376,7 @@ def repo_readme(files):
     out.append(f"| **Learner Guide (DOCX/PDF)** | `courseware/LG-{C.SHORT_TITLE}.docx` (and `.pdf`) |")
     out.append(f"| **Lesson Plan (DOCX/PDF)** | `courseware/LP-{C.SHORT_TITLE}.docx` (and `.pdf`) |")
     out.append("| **Lab Index** | [labs/README.md](labs/README.md) |")
+    out.append(f"| **Lab data** | {sum(len(L.for_lab(a['num'])) for a in ACT)} Excel workbooks, inside each lab's `data/` folder |")
     out.append("| **Tools and Templates** | [labs/tools.md](labs/tools.md) |")
     out.append("")
     out.append("> **Note:** assessment papers, answer keys and trainer-only materials are intentionally "
@@ -329,7 +389,7 @@ def repo_readme(files):
     # Numbered dynamically so the list stays contiguous when a course has no
     # elective labs (this one does not).
     _how = ["Read the Learner Guide first — it follows the same DMAIC order as the course.",
-            "Complete the core labs in order using the Northwind Retail Distribution Centre scenario."]
+            "Complete the core labs in order using the Northwind Retail Distribution Centre scenario. Each lab folder contains the Excel data it works on."]
     if any(a.get("elective") for a in ACT):
         _how.append("Complete the elective labs if time allows, or as post-course practice.")
     _how += ["Keep every worksheet — the final lab combines them into one improvement package.",
@@ -364,7 +424,10 @@ def repo_readme(files):
     out.append("courseware/          slide deck (PPTX + PDF), Learner Guide, Lesson Plan")
     out.append("  archive/           superseded deck versions")
     out.append("  assets/            diagrams and images used by the deck")
-    out.append(f"labs/                the {len(ACT)} lab worksheets + index + toolkit")
+    out.append(f"labs/                {len(ACT)} lab folders + index + toolkit")
+    out.append("  lab-NN-<name>/     one folder per lab")
+    out.append("    README.md        the lab sheet")
+    out.append("    data/*.xlsx      that lab's mock data")
     out.append(f"LG-{C.SHORT_TITLE}.md")
     out.append("                     Learner Guide (Markdown mirror of the DOCX)")
     out.append(".claude/skills/courseware-build/build/")
@@ -406,5 +469,6 @@ def repo_readme(files):
 with open(os.path.join(REPO, "README.md"), "w") as f:
     f.write(repo_readme(files))
 
-print(f"Saved {written} lab files to {LABS}  ({core} core, {written-core} elective)")
+print(f"Saved {written} lab folders to {LABS}  ({core} core, {written-core} elective)")
+print(f"Saved {len(data_files)} Excel datasets into the labs' data/ folders")
 print("Saved labs/README.md, labs/tools.md and README.md")

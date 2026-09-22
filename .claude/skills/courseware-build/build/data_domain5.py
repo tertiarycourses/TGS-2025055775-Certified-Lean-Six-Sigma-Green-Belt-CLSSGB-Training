@@ -28,7 +28,7 @@ DOMAIN5 = [
             ("For defective units (pass/fail): use a p-chart when the sample size varies, and an np-chart when the sample size is constant.", ""),
             ("For counts of defects: use a u-chart when the sample size varies, and a c-chart when the sample size is constant.", ""),
             ("Select the correct chart for your Northwind data and write down the justification against the tree.", ""),
-            ("Build the chart: plot the points in time order, calculate and draw the centre line, then the upper and lower control limits at +/- 3 standard deviations.", ""),
+            ("Open lab23-spc-subgroups.xlsx — 30 days of post-improvement data, 5 orders per day, with Xbar and Range already computed. Plot in time order and draw the centre line and control limits using A2/D3/D4 for n=5.", ""),
             ("Divide the chart into zones: zone C within 1 sigma of the centre line, zone B between 1 and 2 sigma, zone A between 2 and 3 sigma.", ""),
             ("Apply out-of-control rule 1: any single point beyond the UCL or LCL. Investigate immediately — the probability of this happening by chance is roughly 3 in 1,000.", ""),
             ("Apply rule 2: nine consecutive points on the same side of the centre line, indicating the process level has shifted.", ""),
@@ -51,7 +51,7 @@ DOMAIN5 = [
         build="A complete control plan, an SOP for the improved method and a visual management board design.",
         services="Control plan, control limits, monitoring frequency, reaction plan, SOP, visual management, team huddles, gemba",
         steps=[
-            ("Build the control plan table with one row per control point and these columns: process step, CTQ metric, specification, measurement method, sample size, frequency, owner and reaction plan.", ""),
+            ("Open lab24-control-plan-template.xlsx — six control points with metrics, targets, owners and a blank Reaction Plan column to complete.", ""),
             ("Select the key process metrics to track. For Northwind: order processing time, number of late orders, picking time and shipping errors.", ""),
             ("Define the data collection method for each metric: who collects it, how often, and where it is recorded.", ""),
             ("Set the control limits — the acceptable performance thresholds that trigger a response.", ""),
@@ -80,7 +80,7 @@ DOMAIN5 = [
         steps=[
             ("Collect post-improvement data using exactly the same operational definitions and sampling method as your baseline — otherwise the comparison is meaningless.", ""),
             ("Recalculate the process metrics: yield, RTY, DPMO and sigma level, using the same DUDO definitions from Lab 12.", ""),
-            ("Recalculate Cp and Cpk and compare against the baseline values from Lab 13.", ""),
+            ("Open lab25-before-after-verification.xlsx — the baseline month against the post-improvement month. Recalculate Cp and Cpk and compare against your Lab 13 baseline.", ""),
             ("Run a hypothesis test comparing before and after performance — state H0 as 'no difference' and prove the improvement is statistically significant, not random variation.", ""),
             ("Report the p-value and confirm you can reject H0 at your chosen alpha. An improvement you cannot prove statistically is not yet an improvement.", ""),
             ("Quantify the financial benefit and have Finance validate it — a benefit the finance team has not signed off will not be recognised by the business.", ""),
