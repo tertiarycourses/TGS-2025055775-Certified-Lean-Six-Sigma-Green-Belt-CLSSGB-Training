@@ -231,6 +231,13 @@ def readme_md():
         out.append(f"| {a['num']} | [{title}]({urlpath(fd)}/README.md) | "
                    f"{TOPICS[a['topic']]['phase']} | {kind} | {dcol} |")
     out.append("")
+    out.append("## Six Sigma templates")
+    out.append("")
+    out.append("Blank Lean Six Sigma templates (project charter, Kano, FMEA, solution selection, "
+               "control plan and more) are in "
+               "[00 - Six Sigma Templates](00%20-%20Six%20Sigma%20Templates/). They are generic "
+               "forms, so they sit alongside the numbered activity folders rather than inside one.")
+    out.append("")
     out.append("## The interactive toolkit")
     out.append("")
     out.append("See [tools.md](tools.md) for the browser-based problem-solving tools used in the labs.")
@@ -336,6 +343,8 @@ def tools_md():
 
 # ---------------------------------------------------------------- write
 os.makedirs(LABS, exist_ok=True)
+# NOTE: "00 - Six Sigma Templates/" holds generic blank templates and is NOT
+# generated from the single source, so the writer below never touches it.
 # remove the previous FLAT lab files (superseded by the per-lab folder layout)
 for old in glob.glob(os.path.join(LABS, "lab-*.md")):
     os.remove(old)

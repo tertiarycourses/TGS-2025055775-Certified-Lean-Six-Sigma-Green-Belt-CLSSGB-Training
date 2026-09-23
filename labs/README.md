@@ -52,6 +52,10 @@ All the data is one reconciled month of Northwind order-fulfilment records — *
 | 24 | [Control Plan, SOP, Visual Management and Response Plan](24%20-%20Control%20Plan%2C%20SOP%2C%20Visual%20Management%20and%20Response%20Plan/README.md) | CONTROL | Core | [1 file](24%20-%20Control%20Plan%2C%20SOP%2C%20Visual%20Management%20and%20Response%20Plan/data/) |
 | 25 | [Verify the Gain, A3 Storyboard, Handover and Project Closure](25%20-%20Verify%20the%20Gain%2C%20A3%20Storyboard%2C%20Handover%20and%20Project%20Closure/README.md) | CONTROL | Core | [1 file](25%20-%20Verify%20the%20Gain%2C%20A3%20Storyboard%2C%20Handover%20and%20Project%20Closure/data/) |
 
+## Six Sigma templates
+
+Blank Lean Six Sigma templates (project charter, Kano, FMEA, solution selection, control plan and more) are in [00 - Six Sigma Templates](00%20-%20Six%20Sigma%20Templates/). They are generic forms, so they sit alongside the numbered activity folders rather than inside one.
+
 ## The interactive toolkit
 
 See [tools.md](tools.md) for the browser-based problem-solving tools used in the labs.
