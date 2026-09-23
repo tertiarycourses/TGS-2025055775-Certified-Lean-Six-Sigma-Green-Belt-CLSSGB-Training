@@ -1,12 +1,47 @@
-# TGS-2025055775 - Certified Lean Six Sigma Green Belt (CLSSGB) Training
+# Certified Lean Six Sigma Green Belt (CLSSGB) Training
 
-> **Course:** WSQ - Certified Lean Six Sigma Green Belt (CLSSGB) Training  
-> **Course Code:** TGS-2025055775  
-> **Register here:** https://www.tertiarycourses.com.sg/wsq-certified-lean-six-sigma-green-belt-clssgb-training.html
+Lead a Lean Six Sigma improvement project end to end — define and charter it, baseline the process with a trustworthy measurement system, prove the root causes statistically, then pilot and hold the gain.
 
-These are the hands-on lab exercises for the WSQ Certified Lean Six Sigma Green Belt (CLSSGB) Training course delivered by [Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg/).
+| Course detail | Information |
+|---|---|
+| Course code | `TGS-2025055775` |
+| Programme | WSQ (SkillsFuture Singapore) |
+| Duration | 4 days / 32 hours (plus a 2-hour assessment) |
+| Skills Framework | Quality Process Control (ELE-QUA-5006-1.1) |
+| Registration | [View course details and register](https://www.tertiarycourses.com.sg/wsq-certified-lean-six-sigma-green-belt-clssgb-training.html) |
+| Funding | Up to 90% (WSQ 70-90% for eligible companies and Singaporeans/PRs). Eligibility and terms apply — see the course page. |
+| Courseware version | v5 (23 September 2026) |
 
-This repository contains **25 guided Lean Six Sigma Green Belt labs** (25 core and 0 elective), structured around the **DMAIC roadmap** and grounded in the Council for Six Sigma Certification (CSSC) Green Belt body of knowledge (CSSC Green Belt scope, Chapters 1-24).
+---
+
+## About the course
+
+A Green Belt **leads** a scoped DMAIC project and owns the data analysis, where a Yellow Belt supports one. This course is built for that step up: every DMAIC phase pairs the familiar quality tool with its Green Belt statistical counterpart — measurement system analysis and Gage R&R, sampling and sample size, hypothesis testing, correlation and regression, FMEA, design of experiments, SPC and process capability.
+
+It is grounded in the Council for Six Sigma Certification (CSSC) Green Belt body of knowledge (Chapters 1-24) and is delivered by [Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg/).
+
+Every activity runs on one continuous case — the **Northwind Retail Distribution Centre** order-fulfilment process — using a single reconciled month of data: **4,200 orders, 357 of them late (8.5%)**. Because every dataset is a genuine slice of that one month, the sigma level you calculate in Activity 2, the Pareto you build in Activity 15 and the before/after you prove in Activity 25 all reconcile with each other.
+
+## Learning outcomes
+
+- Lead a Lean Six Sigma project — define the problem, scope the work and charter the project.
+- Map and baseline a process using SIPOC, detailed process maps and value stream maps.
+- Build a valid measurement system — sampling, sample size and MSA/Gage R&R — and baseline capability.
+- Analyse process data statistically using Pareto, run charts, hypothesis testing, correlation and regression.
+- Identify and prove root causes of variation using Fishbone, 5 Whys and statistical evidence.
+- Select, risk-assess and pilot improvements using solution selection matrices, FMEA and DOE.
+- Sustain the gain with SPC control charts, process capability and a control plan.
+
+## Topics covered
+
+| Phase | Topic | Weighting |
+|---|---|---|
+| Foundations | Quality · Lean · Six Sigma · Y = f(X) · Belt roles · COPQ · Project selection · DMAIC | 10% |
+| Define | VOC · CTQ trees · Kano · Affinity · Charter · Problem statement · SIPOC · Stakeholders | 18% |
+| Measure | Process mapping · VSM · Takt · Data types · Sampling · Sample size · MSA/Gage R&R · Yield · DPMO · Baseline capability | 24% |
+| Analyze | Variation · Pareto · Run charts · Fishbone · 5 Whys · Multi-voting · Hypothesis testing · p-values · Correlation · Regression | 26% |
+| Improve | Solution generation · Benchmarking · Solution selection matrix · 5S · Poka-Yoke · Pull/JIT · FMEA · DOE · Piloting | 12% |
+| Control | SPC · Control chart selection · Control limits · Out-of-control rules · Cp/Cpk · Control plan · SOP · Visual management · Handover | 10% |
 
 ---
 
@@ -14,15 +49,19 @@ This repository contains **25 guided Lean Six Sigma Green Belt labs** (25 core a
 
 | Artifact | File |
 |----------|------|
-| **Slide deck** | `courseware/Certified Lean Six Sigma Green Belt (CLSSGB) Training-v5.pptx` (and `.pdf`) |
+| **Slide deck** | [PPTX](courseware/Certified%20Lean%20Six%20Sigma%20Green%20Belt%20%28CLSSGB%29%20Training-v5.pptx) · [PDF](courseware/Certified%20Lean%20Six%20Sigma%20Green%20Belt%20%28CLSSGB%29%20Training-v5.pdf) |
 | **Learner Guide (Markdown)** | [LG-Certified Lean Six Sigma Green Belt (CLSSGB) Training.md](LG-Certified%20Lean%20Six%20Sigma%20Green%20Belt%20%28CLSSGB%29%20Training.md) |
-| **Learner Guide (DOCX/PDF)** | `courseware/LG-Certified Lean Six Sigma Green Belt (CLSSGB) Training.docx` (and `.pdf`) |
-| **Lesson Plan (DOCX/PDF)** | `courseware/LP-Certified Lean Six Sigma Green Belt (CLSSGB) Training.docx` (and `.pdf`) |
-| **Lab Index** | [labs/README.md](labs/README.md) |
-| **Lab data** | 28 Excel workbooks, inside each lab's `data/` folder |
+| **Learner Guide** | [DOCX](courseware/LG-Certified%20Lean%20Six%20Sigma%20Green%20Belt%20%28CLSSGB%29%20Training.docx) · [PDF](courseware/LG-Certified%20Lean%20Six%20Sigma%20Green%20Belt%20%28CLSSGB%29%20Training.pdf) |
+| **Lesson Plan** | [DOCX](courseware/LP-Certified%20Lean%20Six%20Sigma%20Green%20Belt%20%28CLSSGB%29%20Training.docx) · [PDF](courseware/LP-Certified%20Lean%20Six%20Sigma%20Green%20Belt%20%28CLSSGB%29%20Training.pdf) |
+| **Activity index** | [labs/README.md](labs/README.md) |
+| **Activity data** | 28 Excel workbooks, one `data/` folder per activity |
 | **Tools and Templates** | [labs/tools.md](labs/tools.md) |
 
-> **Note:** assessment papers, answer keys and trainer-only materials are intentionally not published in this repository.
+### What is and is not published here
+
+This repository is the **public** courseware package: the slide deck, Learner Guide and Lesson Plan in both rendered (PDF) and editable (PPTX/DOCX) form, plus every activity sheet and its data.
+
+**Assessment papers, answer keys, marking guides and licensed source references are deliberately excluded** and are never pushed here. They are issued to registered learners and trainers through the course LMS.
 
 ---
 
@@ -35,7 +74,9 @@ This repository contains **25 guided Lean Six Sigma Green Belt labs** (25 core a
 
 ---
 
-## Lab catalogue
+## Activities
+
+25 guided activities follow the DMAIC roadmap in order. Each has its own folder containing the activity sheet and a `data/` folder with the Excel workbook(s) it works on.
 
 ### Foundations — Six Sigma Foundations & The Green Belt Role
 
@@ -88,10 +129,10 @@ This repository contains **25 guided Lean Six Sigma Green Belt labs** (25 core a
 courseware/          slide deck (PPTX + PDF), Learner Guide, Lesson Plan
   archive/           superseded deck versions
   assets/            diagrams and images used by the deck
-labs/                25 lab folders + index + toolkit
-  lab-NN-<name>/     one folder per lab
-    README.md        the lab sheet
-    data/*.xlsx      that lab's mock data
+labs/                25 activity folders + index + toolkit
+  NN - <Title>/      one folder per activity
+    README.md        the activity sheet
+    data/*.xlsx      that activity's data
 LG-Certified Lean Six Sigma Green Belt (CLSSGB) Training.md
                      Learner Guide (Markdown mirror of the DOCX)
 .claude/skills/courseware-build/build/
@@ -124,4 +165,14 @@ All artifacts are generated from `course_data.py` + `data_domainN.py`, so the de
 
 ---
 
-*Version v5 · 23 September 2026 · © 2026 Tertiary Infotech Academy Pte Ltd*
+## About the provider
+
+[Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg/) is an SSG-approved training organisation in Singapore delivering WSQ and professional courses. UEN: 201200696W.
+
+- **Register:** [Certified Lean Six Sigma Green Belt (CLSSGB) Training](https://www.tertiarycourses.com.sg/wsq-certified-lean-six-sigma-green-belt-clssgb-training.html)
+- **Email:** enquiry@tertiaryinfotech.com
+- **Tel / WhatsApp:** +65 6100 0613
+
+---
+
+*Courseware version v5 · 23 September 2026 · © 2026 Tertiary Infotech Academy Pte Ltd. All rights reserved.*

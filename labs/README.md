@@ -11,7 +11,7 @@ Each lab has its own folder containing the lab sheet (`README.md`) and a `data/`
 ```
 labs/
   lab-01-the-green-belt-role.../
-    README.md        the lab sheet
+    README.md        the activity sheet
     data/*.xlsx      the mock data for this lab
 ```
 

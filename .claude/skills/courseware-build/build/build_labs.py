@@ -13,6 +13,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import course_data as C
 import lab_data as L
+import lab_data as LD
 from data_domain1 import DOMAIN1
 from data_domain2 import DOMAIN2
 from data_domain3 import DOMAIN3
@@ -39,6 +40,8 @@ REPO = _find_repo(HERE)
 LABS = os.path.join(REPO, "labs")
 
 SIPOC_URL = "https://alfredang.github.io/sipoc/"
+REGISTER_URL = ("https://www.tertiarycourses.com.sg/"
+                "wsq-certified-lean-six-sigma-green-belt-clssgb-training.html")
 
 TOOLS = {
     "sipoc": ("SIPOC & Process Map Builder", "https://alfredang.github.io/sipoc/"),
@@ -200,7 +203,7 @@ def readme_md():
     out.append("```")
     out.append("labs/")
     out.append("  lab-01-the-green-belt-role.../")
-    out.append("    README.md        the lab sheet")
+    out.append("    README.md        the activity sheet")
     out.append("    data/*.xlsx      the mock data for this lab")
     out.append("```")
     out.append("")
@@ -374,19 +377,62 @@ core = sum(1 for a in ACT if not a.get("elective"))
 def repo_readme(files):
     n = len(ACT)
     out = []
-    out.append(f"# {C.COURSE_CODE} - {C.TITLE}")
+    out.append(f"# {C.TITLE}")
     out.append("")
-    out.append(f"> **Course:** WSQ - {C.TITLE}  ")
-    out.append(f"> **Course Code:** {C.COURSE_CODE}  ")
-    out.append("> **Register here:** https://www.tertiarycourses.com.sg/wsq-certified-lean-six-sigma-green-belt-clssgb-training.html")
+    out.append("Lead a Lean Six Sigma improvement project end to end — define and charter it, "
+               "baseline the process with a trustworthy measurement system, prove the root causes "
+               "statistically, then pilot and hold the gain.")
     out.append("")
-    out.append(f"These are the hands-on lab exercises for the WSQ {C.TITLE} course delivered by "
+    out.append("| Course detail | Information |")
+    out.append("|---|---|")
+    out.append(f"| Course code | `{C.COURSE_CODE}` |")
+    out.append("| Programme | WSQ (SkillsFuture Singapore) |")
+    out.append(f"| Duration | {C.DAYS} days / 32 hours (plus a 2-hour assessment) |")
+    out.append(f"| Skills Framework | {C.TSC_TITLE} ({C.TSC_CODE}) |")
+    out.append(f"| Registration | [View course details and register]({REGISTER_URL}) |")
+    out.append("| Funding | Up to 90% (WSQ 70-90% for eligible companies and "
+               "Singaporeans/PRs). Eligibility and terms apply — see the course page. |")
+    out.append(f"| Courseware version | {C.VERSION} ({C.VERSION_DATE}) |")
+    out.append("")
+    out.append("---")
+    out.append("")
+    out.append("## About the course")
+    out.append("")
+    out.append("A Green Belt **leads** a scoped DMAIC project and owns the data analysis, where a "
+               "Yellow Belt supports one. This course is built for that step up: every DMAIC phase "
+               "pairs the familiar quality tool with its Green Belt statistical counterpart — "
+               "measurement system analysis and Gage R&R, sampling and sample size, hypothesis "
+               "testing, correlation and regression, FMEA, design of experiments, SPC and process "
+               "capability.")
+    out.append("")
+    out.append("It is grounded in the Council for Six Sigma Certification (CSSC) Green Belt body of "
+               "knowledge (Chapters 1-24) and is delivered by "
                "[Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg/).")
     out.append("")
-    out.append(f"This repository contains **{n} guided Lean Six Sigma Green Belt labs** "
-               f"({core} core and {n-core} elective), structured around the **DMAIC roadmap** and grounded in the "
-               "Council for Six Sigma Certification (CSSC) Green Belt body of knowledge "
-               "(CSSC Green Belt scope, Chapters 1-24).")
+    out.append("Every activity runs on one continuous case — the **Northwind Retail Distribution "
+               "Centre** order-fulfilment process — using a single reconciled month of data: "
+               f"**{LD.TOTAL_ORDERS:,} orders, {LD.LATE_ORDERS} of them late "
+               f"({LD.LATE_ORDERS/LD.TOTAL_ORDERS*100:.1f}%)**. Because every dataset is a genuine "
+               "slice of that one month, the sigma level you calculate in Activity 2, the Pareto you "
+               "build in Activity 15 and the before/after you prove in Activity 25 all reconcile "
+               "with each other.")
+    out.append("")
+    out.append("## Learning outcomes")
+    out.append("")
+    for lo in C.LEARNING_OUTCOMES:
+        # "LO1: Lead a ... project (A1, A2)." -> "Lead a ... project."
+        # The LO number and the TSC criterion codes are internal mapping, not
+        # something a prospective learner reading the README needs.
+        _t = lo.split(": ", 1)[1] if ": " in lo else lo
+        _t = re.sub(r"\s*\((?:[AK]\d+(?:,\s*)?)+\)\s*\.?$", ".", _t.strip())
+        out.append(f"- {_t}")
+    out.append("")
+    out.append("## Topics covered")
+    out.append("")
+    out.append("| Phase | Topic | Weighting |")
+    out.append("|---|---|---|")
+    for t in C.TOPICS:
+        out.append(f"| {t['phase'].title()} | {t['subtitle']} | {t['weighting']} |")
     out.append("")
     out.append("---")
     out.append("")
@@ -398,16 +444,27 @@ def repo_readme(files):
     def enc(p):
         return p.replace(" ", "%20").replace("(", "%28").replace(")", "%29")
     lg_md = f"LG-{C.SHORT_TITLE}.md"
-    out.append(f"| **Slide deck** | `courseware/{C.SHORT_TITLE}-{C.VERSION}.pptx` (and `.pdf`) |")
+    _deck = f"courseware/{C.SHORT_TITLE}-{C.VERSION}"
+    out.append(f"| **Slide deck** | [PPTX]({enc(_deck)}.pptx) · [PDF]({enc(_deck)}.pdf) |")
     out.append(f"| **Learner Guide (Markdown)** | [{lg_md}]({enc(lg_md)}) |")
-    out.append(f"| **Learner Guide (DOCX/PDF)** | `courseware/LG-{C.SHORT_TITLE}.docx` (and `.pdf`) |")
-    out.append(f"| **Lesson Plan (DOCX/PDF)** | `courseware/LP-{C.SHORT_TITLE}.docx` (and `.pdf`) |")
-    out.append("| **Lab Index** | [labs/README.md](labs/README.md) |")
-    out.append(f"| **Lab data** | {sum(len(L.for_lab(a['num'])) for a in ACT)} Excel workbooks, inside each lab's `data/` folder |")
+    _lg = f"courseware/LG-{C.SHORT_TITLE}"
+    _lp = f"courseware/LP-{C.SHORT_TITLE}"
+    out.append(f"| **Learner Guide** | [DOCX]({enc(_lg)}.docx) · [PDF]({enc(_lg)}.pdf) |")
+    out.append(f"| **Lesson Plan** | [DOCX]({enc(_lp)}.docx) · [PDF]({enc(_lp)}.pdf) |")
+    out.append("| **Activity index** | [labs/README.md](labs/README.md) |")
+    out.append(f"| **Activity data** | {sum(len(L.for_lab(a['num'])) for a in ACT)} Excel workbooks, "
+               "one `data/` folder per activity |")
     out.append("| **Tools and Templates** | [labs/tools.md](labs/tools.md) |")
     out.append("")
-    out.append("> **Note:** assessment papers, answer keys and trainer-only materials are intentionally "
-               "not published in this repository.")
+    out.append("### What is and is not published here")
+    out.append("")
+    out.append("This repository is the **public** courseware package: the slide deck, Learner Guide "
+               "and Lesson Plan in both rendered (PDF) and editable (PPTX/DOCX) form, plus every "
+               "activity sheet and its data.")
+    out.append("")
+    out.append("**Assessment papers, answer keys, marking guides and licensed source references are "
+               "deliberately excluded** and are never pushed here. They are issued to registered "
+               "learners and trainers through the course LMS.")
     out.append("")
     out.append("---")
     out.append("")
@@ -426,7 +483,11 @@ def repo_readme(files):
     out.append("")
     out.append("---")
     out.append("")
-    out.append("## Lab catalogue")
+    out.append("## Activities")
+    out.append("")
+    out.append(f"{n} guided activities follow the DMAIC roadmap in order. Each has its own folder "
+               "containing the activity sheet and a `data/` folder with the Excel workbook(s) it "
+               "works on.")
     out.append("")
     for t in C.TOPICS:
         acts = [a for a in ACT if a["topic"] == t["num"]]
@@ -451,10 +512,10 @@ def repo_readme(files):
     out.append("courseware/          slide deck (PPTX + PDF), Learner Guide, Lesson Plan")
     out.append("  archive/           superseded deck versions")
     out.append("  assets/            diagrams and images used by the deck")
-    out.append(f"labs/                {len(ACT)} lab folders + index + toolkit")
-    out.append("  lab-NN-<name>/     one folder per lab")
-    out.append("    README.md        the lab sheet")
-    out.append("    data/*.xlsx      that lab's mock data")
+    out.append(f"labs/                {len(ACT)} activity folders + index + toolkit")
+    out.append("  NN - <Title>/      one folder per activity")
+    out.append("    README.md        the activity sheet")
+    out.append("    data/*.xlsx      that activity's data")
     out.append(f"LG-{C.SHORT_TITLE}.md")
     out.append("                     Learner Guide (Markdown mirror of the DOCX)")
     out.append(".claude/skills/courseware-build/build/")
@@ -488,7 +549,20 @@ def repo_readme(files):
     out.append("")
     out.append("---")
     out.append("")
-    out.append(f"*Version {C.VERSION} · {C.VERSION_DATE} · © 2026 {C.ORG}*")
+    out.append("## About the provider")
+    out.append("")
+    out.append("[Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg/) is an "
+               "SSG-approved training organisation in Singapore delivering WSQ and professional "
+               f"courses. {C.UEN}.")
+    out.append("")
+    out.append(f"- **Register:** [{C.TITLE}]({REGISTER_URL})")
+    out.append("- **Email:** enquiry@tertiaryinfotech.com")
+    out.append("- **Tel / WhatsApp:** +65 6100 0613")
+    out.append("")
+    out.append("---")
+    out.append("")
+    out.append(f"*Courseware version {C.VERSION} · {C.VERSION_DATE} · © 2026 {C.ORG}. "
+               "All rights reserved.*")
     out.append("")
     return "\n".join(out)
 
