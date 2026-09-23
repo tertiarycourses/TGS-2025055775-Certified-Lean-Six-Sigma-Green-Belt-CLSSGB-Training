@@ -165,7 +165,7 @@ A belt responsibility matrix, a scored project selection screen and a costed bus
 
 Your selected project scores highest on the criteria table, contains no pre-selected solution, and your business case states an annualised dollar figure.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-01-the-green-belt-role-project-selection-and-business-case/.
+> **Note:** The full worksheet and the data files for this lab are in labs/01 - The Green Belt Role, Project Selection and Business Case/.
 
 ---
 
@@ -202,7 +202,7 @@ A Y = f(X) statement, a DPMO calculation and a baseline sigma level.   (Tools an
 
 Your Y is a measurable customer-facing output, you have at least eight Xs, and your DPMO and sigma level are calculated from the 357/4,200 baseline.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-02-y-fx-sigma-level-dpmo-and-the-dmaic-roadmap/.
+> **Note:** The full worksheet and the data files for this lab are in labs/02 - Y = f(X), Sigma Level, DPMO and the DMAIC Roadmap/.
 
 ---
 
@@ -255,7 +255,7 @@ A VOC log, an affinity diagram of themes and a Kano classification table.   (Too
 
 You have at least twelve verbatims, every verbatim sits in a named affinity cluster, and every cluster carries a Kano classification.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-03-voice-of-the-customer-affinity-diagram-and-kano-analysis/.
+> **Note:** The full worksheet and the data files for this lab are in labs/03 - Voice of the Customer, Affinity Diagram and Kano Analysis/.
 
 ---
 
@@ -292,7 +292,7 @@ A three-level CTQ tree with metric, target, USL and LSL for each requirement.   
 
 Every CTQ has a unit of measure, a target, specification limits and an operational definition unambiguous enough for two people to apply identically.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-04-ctq-tree-translating-customer-needs-into-measurable-requirem/.
+> **Note:** The full worksheet and the data files for this lab are in labs/04 - CTQ Tree — Translating Customer Needs into Measurable Requirements/.
 
 ---
 
@@ -330,7 +330,7 @@ A complete one-page project charter with all seven sections signed off.   (Tools
 
 Your problem statement contains process, period, measurable gap and impact but no cause or solution; your goal statement contains metric, baseline, target and date.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-05-project-charter-problem-statement-goal-statement-and-scope/.
+> **Note:** The full worksheet and the data files for this lab are in labs/05 - Project Charter, Problem Statement, Goal Statement and Scope/.
 
 ---
 
@@ -376,7 +376,7 @@ A validated SIPOC (exported from the builder), a stakeholder power/interest grid
 
 'Check my SIPOC' passes, all five columns are populated with explicit boundaries and at least three pain points tagged, and your RACI has exactly one Accountable per deliverable.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-06-sipoc-stakeholder-analysis-and-raci/.
+> **Note:** The full worksheet and the data files for this lab are in labs/06 - SIPOC, Stakeholder Analysis and RACI/.
 
 ---
 
@@ -437,7 +437,7 @@ A detailed process map and a swimlane map with pain points and handoffs marked. 
 
 Every lane crossing on your swimlane map is marked as a handoff with a named owner on both sides, and every rework loop is labelled with its percentage.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-07-detailed-process-mapping-and-swimlane-analysis/.
+> **Note:** The full worksheet and the data files for this lab are in labs/07 - Detailed Process Mapping and Swimlane Analysis/.
 
 ---
 
@@ -476,7 +476,7 @@ A current-state VSM with a timeline ladder, a takt time calculation and a waste 
 
 Your VSM shows both material and information flow, your timeline ladder yields a process cycle efficiency percentage, and every step's cycle time is compared against takt.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-08-value-stream-mapping-takt-time-and-the-eight-wastes/.
+> **Note:** The full worksheet and the data files for this lab are in labs/08 - Value Stream Mapping, Takt Time and the Eight Wastes/.
 
 ---
 
@@ -514,7 +514,7 @@ A data type classification, operational definitions and a complete data collecti
 
 Two people applying your operational definitions to the same records produce identical values, and your plan captures stratification factors alongside the main measure.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-09-data-types-operational-definitions-and-the-data-collection-p/.
+> **Note:** The full worksheet and the data files for this lab are in labs/09 - Data Types, Operational Definitions and the Data Collection Plan/.
 
 ---
 
@@ -558,7 +558,7 @@ A justified sampling plan and calculated sample sizes for continuous and discret
 
 Your sample size is calculated from the formula rather than assumed, and your sampling technique is random or stratified — never convenience.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-10-sampling-techniques-and-sample-size-calculation/.
+> **Note:** The full worksheet and the data files for this lab are in labs/10 - Sampling Techniques and Sample Size Calculation/.
 
 ---
 
@@ -598,7 +598,7 @@ An attribute Gage R&R study with repeatability, reproducibility and accuracy per
 
 You can state your repeatability, reproducibility and accuracy percentages and give a clear go/no-go verdict on whether the measurement system can be trusted.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-11-measurement-system-analysis-and-gage-rr/.
+> **Note:** The full worksheet and the data files for this lab are in labs/11 - Measurement System Analysis and Gage R&R/.
 
 ---
 
@@ -643,7 +643,7 @@ A metrics worksheet with yield, FPY, RTY, DPU, DPO and DPMO calculated for the p
 
 Your RTY is lower than your classic yield, you can explain the hidden factory gap between them, and your DPMO converts to a stated sigma level.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-12-yield-dpu-dpo-dpmo-rty-and-the-hidden-factory/.
+> **Note:** The full worksheet and the data files for this lab are in labs/12 - Yield, DPU, DPO, DPMO, RTY and the Hidden Factory/.
 
 ---
 
@@ -690,7 +690,7 @@ A descriptive statistics summary, a normality assessment and calculated Cp and C
 
 You can state your baseline Cp and Cpk, explain the difference between them, and say whether the problem is spread, centring or both.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-13-descriptive-statistics-normality-and-baseline-process-capabi/.
+> **Note:** The full worksheet and the data files for this lab are in labs/13 - Descriptive Statistics, Normality and Baseline Process Capability/.
 
 ---
 
@@ -748,7 +748,7 @@ A run chart of the baseline data with the six non-random patterns assessed.   (T
 
 You can state whether your process is stable, name every non-random pattern you tested for, and explain what tampering is and why it makes things worse.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-14-variation-run-charts-and-stability-analysis/.
+> **Note:** The full worksheet and the data files for this lab are in labs/14 - Variation, Run Charts and Stability Analysis/.
 
 ---
 
@@ -789,7 +789,7 @@ A Pareto chart with cumulative line, stratified Pareto charts and comparative bo
 
 Your Pareto identifies the vital few crossing 80% cumulative, and your stratified charts show whether the problem is universal or concentrated in a subgroup.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-15-pareto-analysis-stratification-and-boxplots/.
+> **Note:** The full worksheet and the data files for this lab are in labs/15 - Pareto Analysis, Stratification and Boxplots/.
 
 ---
 
@@ -830,7 +830,7 @@ A Fishbone diagram, three 5 Whys chains and a multi-voted shortlist of causes to
 
 Every Fishbone bone has sub-causes, each 5 Whys chain ends at a process cause rather than a person, and each shortlisted cause has a testable hypothesis written for it.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-16-fishbone-5-whys-multivoting-and-cause-prioritisation/.
+> **Note:** The full worksheet and the data files for this lab are in labs/16 - Fishbone, 5 Whys, Multi-Voting and Cause Prioritisation/.
 
 ---
 
@@ -876,7 +876,7 @@ Stated hypotheses, a justified test selection, and a documented statistical conc
 
 For each tested cause you can state H0, Ha, the test selected with justification, the p-value, the decision against alpha, and the business conclusion in plain language.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-17-hypothesis-testing-test-selection-pvalues-and-conclusions/.
+> **Note:** The full worksheet and the data files for this lab are in labs/17 - Hypothesis Testing — Test Selection, p-values and Conclusions/.
 
 ---
 
@@ -919,7 +919,7 @@ A scatter plot, a correlation coefficient, a regression equation and a predictio
 
 You can state R, r-squared and the regression equation, use it to predict Y, and explain in one sentence why the correlation alone does not prove causation.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-18-correlation-regression-and-quantifying-the-xy-relationship/.
+> **Note:** The full worksheet and the data files for this lab are in labs/18 - Correlation, Regression and Quantifying the X-Y Relationship/.
 
 ---
 
@@ -975,7 +975,7 @@ A solution log of at least fifteen candidate solutions mapped to proven root cau
 
 You have at least fifteen distinct solutions, every one traces to a root cause proven with data, and at least three came from benchmarking.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-19-solution-generation-benchmarking-and-brainwriting/.
+> **Note:** The full worksheet and the data files for this lab are in labs/19 - Solution Generation, Benchmarking and Brainwriting/.
 
 ---
 
@@ -1015,7 +1015,7 @@ A countermeasure plan applying 5S, poka-yoke, pull and standard work to your pro
 
 Every countermeasure traces to a specific waste, and your poka-yoke prevents or detects the error rather than relying on someone remembering to check.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-20-lean-countermeasures-5s-pokayoke-pull-jit-and-standard-work/.
+> **Note:** The full worksheet and the data files for this lab are in labs/20 - Lean Countermeasures — 5S, Poka-Yoke, Pull, JIT and Standard Work/.
 
 ---
 
@@ -1056,7 +1056,7 @@ A weighted solution selection matrix with ranked results and a cost-benefit anal
 
 Your matrix has weighted criteria with a defined scoring scale, every solution is scored, and your top-ranked solution has a payback period calculated.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-21-solution-selection-matrix-and-costbenefit-analysis/.
+> **Note:** The full worksheet and the data files for this lab are in labs/21 - Solution Selection Matrix and Cost-Benefit Analysis/.
 
 ---
 
@@ -1103,7 +1103,7 @@ A completed FMEA with RPN scores, a DOE plan and a pilot plan with success crite
 
 Every FMEA row has an RPN, the highest RPNs have owned actions with dates, and your pilot has quantified success criteria measured against the Lab 13 baseline.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-22-fmea-risk-priority-numbers-doe-and-piloting/.
+> **Note:** The full worksheet and the data files for this lab are in labs/22 - FMEA, Risk Priority Numbers, DOE and Piloting/.
 
 ---
 
@@ -1167,7 +1167,7 @@ A correctly selected control chart with calculated limits and the eight rules ap
 
 You can justify your chart choice against the selection tree, your limits are calculated at +/- 3 sigma, and you have applied all eight out-of-control rules.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-23-statistical-process-control-chart-selection-and-control-limi/.
+> **Note:** The full worksheet and the data files for this lab are in labs/23 - Statistical Process Control — Chart Selection and Control Limits/.
 
 ---
 
@@ -1210,7 +1210,7 @@ A complete control plan, an SOP for the improved method and a visual management 
 
 Every control point has a named owner, a monitoring frequency and a specific reaction plan stating what to do when the metric breaches its limit.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-24-control-plan-sop-visual-management-and-response-plan/.
+> **Note:** The full worksheet and the data files for this lab are in labs/24 - Control Plan, SOP, Visual Management and Response Plan/.
 
 ---
 
@@ -1255,7 +1255,7 @@ A before/after capability comparison, a validated benefit, an A3 storyboard and 
 
 Your after-capability beats the baseline, the improvement is proven with a hypothesis test and a stated p-value, and the process owner has signed the handover.
 
-> **Note:** The full worksheet and the data files for this lab are in labs/lab-25-verify-the-gain-a3-storyboard-handover-and-project-closure/.
+> **Note:** The full worksheet and the data files for this lab are in labs/25 - Verify the Gain, A3 Storyboard, Handover and Project Closure/.
 
 ---
 

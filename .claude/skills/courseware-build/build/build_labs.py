@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import glob
+from urllib.parse import quote as _quote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -59,11 +60,28 @@ def slug(title):
 
 
 def folder(a):
-    """Each lab owns a folder: labs/lab-NN-<slug>/ with README.md + data/."""
-    return f"lab-{a['num']:02d}-{slug(a['title'])}"
+    """Each lab owns a folder, named in the house convention used across the
+    other Tertiary courses: "NN - Title Case" (e.g. "01 - Stakeholder Influence
+    Mapping"). Readable in Google Drive and in the GitHub file list."""
+    title = a["title"].replace("Elective — ", "")
+    # keep the title readable as a folder name: drop characters that are awkward
+    # in a path or on Drive, and collapse the whitespace that leaves behind.
+    safe = re.sub(r'[\\/:*?"<>|]', " ", title)
+    safe = re.sub(r"\s+", " ", safe).strip()
+    return f"{a['num']:02d} - {safe}"
 
 
 FOLDER = {a["num"]: folder(a) for a in ACT}
+
+
+def urlpath(path):
+    """Percent-encode a path for a Markdown link target.
+
+    The folder names are human-readable ("02 - Y = f(X), Sigma Level ..."), so
+    they contain spaces, commas and parentheses. An unencoded "(" terminates the
+    link target in Markdown, so every generated link target goes through here.
+    """
+    return _quote(path, safe="/")
 
 
 def lab_md(a):
@@ -108,7 +126,7 @@ def lab_md(a):
         out.append("")
         for ds in dsets:
             fn = L.filename(ds, "xlsx")
-            out.append(f"- **[`{fn}`](data/{fn})** — {ds['desc']}")
+            out.append(f"- **[`{fn}`](data/{urlpath(fn)})** — {ds['desc']}")
         out.append("")
         for ds in dsets:
             if not ds["notes"]:
@@ -208,9 +226,9 @@ def readme_md():
         kind = "Elective" if a.get("elective") else "Core"
         title = a["title"].replace("Elective — ", "")
         ds = L.for_lab(a["num"])
-        dcol = (f"[{len(ds)} file{'s' if len(ds) > 1 else ''}]({fd}/data/)"
+        dcol = (f"[{len(ds)} file{'s' if len(ds) > 1 else ''}]({urlpath(fd)}/data/)"
                 if ds else "—")
-        out.append(f"| {a['num']} | [{title}]({fd}/README.md) | "
+        out.append(f"| {a['num']} | [{title}]({urlpath(fd)}/README.md) | "
                    f"{TOPICS[a['topic']]['phase']} | {kind} | {dcol} |")
     out.append("")
     out.append("## The interactive toolkit")
@@ -414,7 +432,7 @@ def repo_readme(files):
         for a in acts:
             title = a["title"].replace("Elective — ", "")
             tag = " *(elective)*" if a.get("elective") else ""
-            out.append(f"- [Lab {a['num']} - {title}](labs/{files[a['num']]}){tag}")
+            out.append(f"- [Lab {a['num']} - {title}](labs/{urlpath(files[a['num']])}){tag}")
         out.append("")
     out.append("---")
     out.append("")

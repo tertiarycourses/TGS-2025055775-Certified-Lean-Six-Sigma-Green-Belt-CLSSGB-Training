@@ -39,46 +39,46 @@ This repository contains **25 guided Lean Six Sigma Green Belt labs** (25 core a
 
 ### Foundations — Six Sigma Foundations & The Green Belt Role
 
-- [Lab 1 - The Green Belt Role, Project Selection and Business Case](labs/lab-01-the-green-belt-role-project-selection-and-business-case/README.md)
-- [Lab 2 - Y = f(X), Sigma Level, DPMO and the DMAIC Roadmap](labs/lab-02-y-fx-sigma-level-dpmo-and-the-dmaic-roadmap/README.md)
+- [Lab 1 - The Green Belt Role, Project Selection and Business Case](labs/01%20-%20The%20Green%20Belt%20Role%2C%20Project%20Selection%20and%20Business%20Case/README.md)
+- [Lab 2 - Y = f(X), Sigma Level, DPMO and the DMAIC Roadmap](labs/02%20-%20Y%20%3D%20f%28X%29%2C%20Sigma%20Level%2C%20DPMO%20and%20the%20DMAIC%20Roadmap/README.md)
 
 ### Define — Scope the Problem
 
-- [Lab 3 - Voice of the Customer, Affinity Diagram and Kano Analysis](labs/lab-03-voice-of-the-customer-affinity-diagram-and-kano-analysis/README.md)
-- [Lab 4 - CTQ Tree — Translating Customer Needs into Measurable Requirements](labs/lab-04-ctq-tree-translating-customer-needs-into-measurable-requirem/README.md)
-- [Lab 5 - Project Charter, Problem Statement, Goal Statement and Scope](labs/lab-05-project-charter-problem-statement-goal-statement-and-scope/README.md)
-- [Lab 6 - SIPOC, Stakeholder Analysis and RACI](labs/lab-06-sipoc-stakeholder-analysis-and-raci/README.md)
+- [Lab 3 - Voice of the Customer, Affinity Diagram and Kano Analysis](labs/03%20-%20Voice%20of%20the%20Customer%2C%20Affinity%20Diagram%20and%20Kano%20Analysis/README.md)
+- [Lab 4 - CTQ Tree — Translating Customer Needs into Measurable Requirements](labs/04%20-%20CTQ%20Tree%20%E2%80%94%20Translating%20Customer%20Needs%20into%20Measurable%20Requirements/README.md)
+- [Lab 5 - Project Charter, Problem Statement, Goal Statement and Scope](labs/05%20-%20Project%20Charter%2C%20Problem%20Statement%2C%20Goal%20Statement%20and%20Scope/README.md)
+- [Lab 6 - SIPOC, Stakeholder Analysis and RACI](labs/06%20-%20SIPOC%2C%20Stakeholder%20Analysis%20and%20RACI/README.md)
 
 ### Measure — Quantify Performance
 
-- [Lab 7 - Detailed Process Mapping and Swimlane Analysis](labs/lab-07-detailed-process-mapping-and-swimlane-analysis/README.md)
-- [Lab 8 - Value Stream Mapping, Takt Time and the Eight Wastes](labs/lab-08-value-stream-mapping-takt-time-and-the-eight-wastes/README.md)
-- [Lab 9 - Data Types, Operational Definitions and the Data Collection Plan](labs/lab-09-data-types-operational-definitions-and-the-data-collection-p/README.md)
-- [Lab 10 - Sampling Techniques and Sample Size Calculation](labs/lab-10-sampling-techniques-and-sample-size-calculation/README.md)
-- [Lab 11 - Measurement System Analysis and Gage R&R](labs/lab-11-measurement-system-analysis-and-gage-rr/README.md)
-- [Lab 12 - Yield, DPU, DPO, DPMO, RTY and the Hidden Factory](labs/lab-12-yield-dpu-dpo-dpmo-rty-and-the-hidden-factory/README.md)
-- [Lab 13 - Descriptive Statistics, Normality and Baseline Process Capability](labs/lab-13-descriptive-statistics-normality-and-baseline-process-capabi/README.md)
+- [Lab 7 - Detailed Process Mapping and Swimlane Analysis](labs/07%20-%20Detailed%20Process%20Mapping%20and%20Swimlane%20Analysis/README.md)
+- [Lab 8 - Value Stream Mapping, Takt Time and the Eight Wastes](labs/08%20-%20Value%20Stream%20Mapping%2C%20Takt%20Time%20and%20the%20Eight%20Wastes/README.md)
+- [Lab 9 - Data Types, Operational Definitions and the Data Collection Plan](labs/09%20-%20Data%20Types%2C%20Operational%20Definitions%20and%20the%20Data%20Collection%20Plan/README.md)
+- [Lab 10 - Sampling Techniques and Sample Size Calculation](labs/10%20-%20Sampling%20Techniques%20and%20Sample%20Size%20Calculation/README.md)
+- [Lab 11 - Measurement System Analysis and Gage R&R](labs/11%20-%20Measurement%20System%20Analysis%20and%20Gage%20R%26R/README.md)
+- [Lab 12 - Yield, DPU, DPO, DPMO, RTY and the Hidden Factory](labs/12%20-%20Yield%2C%20DPU%2C%20DPO%2C%20DPMO%2C%20RTY%20and%20the%20Hidden%20Factory/README.md)
+- [Lab 13 - Descriptive Statistics, Normality and Baseline Process Capability](labs/13%20-%20Descriptive%20Statistics%2C%20Normality%20and%20Baseline%20Process%20Capability/README.md)
 
 ### Analyze — Find and Prove the Root Cause
 
-- [Lab 14 - Variation, Run Charts and Stability Analysis](labs/lab-14-variation-run-charts-and-stability-analysis/README.md)
-- [Lab 15 - Pareto Analysis, Stratification and Boxplots](labs/lab-15-pareto-analysis-stratification-and-boxplots/README.md)
-- [Lab 16 - Fishbone, 5 Whys, Multi-Voting and Cause Prioritisation](labs/lab-16-fishbone-5-whys-multivoting-and-cause-prioritisation/README.md)
-- [Lab 17 - Hypothesis Testing — Test Selection, p-values and Conclusions](labs/lab-17-hypothesis-testing-test-selection-pvalues-and-conclusions/README.md)
-- [Lab 18 - Correlation, Regression and Quantifying the X-Y Relationship](labs/lab-18-correlation-regression-and-quantifying-the-xy-relationship/README.md)
+- [Lab 14 - Variation, Run Charts and Stability Analysis](labs/14%20-%20Variation%2C%20Run%20Charts%20and%20Stability%20Analysis/README.md)
+- [Lab 15 - Pareto Analysis, Stratification and Boxplots](labs/15%20-%20Pareto%20Analysis%2C%20Stratification%20and%20Boxplots/README.md)
+- [Lab 16 - Fishbone, 5 Whys, Multi-Voting and Cause Prioritisation](labs/16%20-%20Fishbone%2C%205%20Whys%2C%20Multi-Voting%20and%20Cause%20Prioritisation/README.md)
+- [Lab 17 - Hypothesis Testing — Test Selection, p-values and Conclusions](labs/17%20-%20Hypothesis%20Testing%20%E2%80%94%20Test%20Selection%2C%20p-values%20and%20Conclusions/README.md)
+- [Lab 18 - Correlation, Regression and Quantifying the X-Y Relationship](labs/18%20-%20Correlation%2C%20Regression%20and%20Quantifying%20the%20X-Y%20Relationship/README.md)
 
 ### Improve — Select, De-Risk and Pilot the Fix
 
-- [Lab 19 - Solution Generation, Benchmarking and Brainwriting](labs/lab-19-solution-generation-benchmarking-and-brainwriting/README.md)
-- [Lab 20 - Lean Countermeasures — 5S, Poka-Yoke, Pull, JIT and Standard Work](labs/lab-20-lean-countermeasures-5s-pokayoke-pull-jit-and-standard-work/README.md)
-- [Lab 21 - Solution Selection Matrix and Cost-Benefit Analysis](labs/lab-21-solution-selection-matrix-and-costbenefit-analysis/README.md)
-- [Lab 22 - FMEA, Risk Priority Numbers, DOE and Piloting](labs/lab-22-fmea-risk-priority-numbers-doe-and-piloting/README.md)
+- [Lab 19 - Solution Generation, Benchmarking and Brainwriting](labs/19%20-%20Solution%20Generation%2C%20Benchmarking%20and%20Brainwriting/README.md)
+- [Lab 20 - Lean Countermeasures — 5S, Poka-Yoke, Pull, JIT and Standard Work](labs/20%20-%20Lean%20Countermeasures%20%E2%80%94%205S%2C%20Poka-Yoke%2C%20Pull%2C%20JIT%20and%20Standard%20Work/README.md)
+- [Lab 21 - Solution Selection Matrix and Cost-Benefit Analysis](labs/21%20-%20Solution%20Selection%20Matrix%20and%20Cost-Benefit%20Analysis/README.md)
+- [Lab 22 - FMEA, Risk Priority Numbers, DOE and Piloting](labs/22%20-%20FMEA%2C%20Risk%20Priority%20Numbers%2C%20DOE%20and%20Piloting/README.md)
 
 ### Control — Hold the Gain
 
-- [Lab 23 - Statistical Process Control — Chart Selection and Control Limits](labs/lab-23-statistical-process-control-chart-selection-and-control-limi/README.md)
-- [Lab 24 - Control Plan, SOP, Visual Management and Response Plan](labs/lab-24-control-plan-sop-visual-management-and-response-plan/README.md)
-- [Lab 25 - Verify the Gain, A3 Storyboard, Handover and Project Closure](labs/lab-25-verify-the-gain-a3-storyboard-handover-and-project-closure/README.md)
+- [Lab 23 - Statistical Process Control — Chart Selection and Control Limits](labs/23%20-%20Statistical%20Process%20Control%20%E2%80%94%20Chart%20Selection%20and%20Control%20Limits/README.md)
+- [Lab 24 - Control Plan, SOP, Visual Management and Response Plan](labs/24%20-%20Control%20Plan%2C%20SOP%2C%20Visual%20Management%20and%20Response%20Plan/README.md)
+- [Lab 25 - Verify the Gain, A3 Storyboard, Handover and Project Closure](labs/25%20-%20Verify%20the%20Gain%2C%20A3%20Storyboard%2C%20Handover%20and%20Project%20Closure/README.md)
 
 ---
 

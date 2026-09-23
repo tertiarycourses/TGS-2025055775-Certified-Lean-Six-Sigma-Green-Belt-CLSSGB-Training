@@ -132,9 +132,10 @@ for t in C.TOPICS:
         steps([(instr,cmd) for instr,cmd in a["steps"]])
         h3("Check your work")
         p(a["test"])
-        _sl = "-".join(_re.sub(r"[^a-zA-Z0-9 ]","",a["title"].replace("Elective — ","")).lower().split())[:60]
+        _fd = _re.sub(r"\s+", " ", _re.sub(r'[\\/:*?"<>|]', " ",
+                      a["title"].replace("Elective — ", ""))).strip()
         note(f"The full worksheet and the data files for this lab are in "
-             f"labs/lab-{a['num']:02d}-{_sl}/.")
+             f"labs/{a['num']:02d} - {_fd}/.")
         rule()
 
 h1("Quick Reference — Formulas You Should Know")
